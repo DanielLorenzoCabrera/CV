@@ -1,7 +1,10 @@
-import React from 'react';
 
-const Window = () => {
-    return(<div>eo</div>)
+import './Window.css'
+
+import MainNavBar from '../MainNavBar/MainNavBar';
+
+const Window = props => {
+    return(<MainNavBar files={[]}/>)
 }
 
 export default Window;
