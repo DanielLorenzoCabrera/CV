@@ -1,0 +1,90 @@
+:root{
+    --macos-gray : #242633;
+    --macos-white : rgb(255, 242, 242);
+}
+
+.window.macOS{
+    background-image:url('../../assets/img/macOS_background_light.jpg') ;
+    background-size: cover;
+}
+
+
+.macOS .mainNavBar{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+.macOS .navBarItemContainer{
+    justify-content: center;
+    flex-flow: row wrap;
+    background-color: rgba(223, 208, 208, 0.5);
+    border-radius: 1em;
+    backdrop-filter: blur(500px);
+    padding: .5em;
+    /*transform: translateY(400px);*/
+    display: flex;
+    transition: all .4s ;
+}
+
+.macOS .mainNavBar:hover .navBarItemContainer{
+    transform: translateY(0); 
+}
+
+.macOS .mainNavBarFile{
+    margin: 0 .5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.macOS .navBarFileInfo{
+   margin: 0;
+   opacity: 0;
+   background-color: var(--macos-gray);
+   color: var(--macos-white);
+   text-align: center;
+   transform: translateY(20px);
+   border-radius: .2em;
+   z-index: 10;
+}
+
+
+.mainNavBarFile:hover{
+    transform: scale(1.75) translate(0,-10px);
+    margin: 0 .8em;
+    transition: all .3s .0s;
+    cursor: pointer;
+}
+
+.mainNavBarFile:hover + .mainNavBarFile {
+    transform: scale(1.25) translate(0,-10px);
+    transition: all .3s .05s;
+    margin: 0 .5em;
+}
+
+.example{
+    outline: 2em solid red;
+}
+
+.macOS .mainNavBarFile:hover .navBarFileInfo{
+    opacity: 100;
+    transform: translateY(0);
+    transition: translateY .2s;
+}
+
+.macOS .icon{
+    padding: .1em;
+}
+
+
+
+
+.brain{
+    font-size: 4em;
+}

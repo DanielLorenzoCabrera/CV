@@ -1,0 +1,10 @@
+.window{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(135, 173, 222);
+    overflow: hidden;
+}
+
