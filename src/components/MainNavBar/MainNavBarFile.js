@@ -1,12 +1,10 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrain } from "@fortawesome/free-solid-svg-icons";
 
-const MainNavBarFile = ({ text, fileNumber }) => {
+const MainNavBarFile = ({ text, fileNumber, updatePrevSibling, removePrevSibling }) => {
   return (
-    <div className={'mainNavBarFile'}>
+    <div className={'mainNavBarFile'} onMouseEnter={() => updatePrevSibling(fileNumber)} onMouseLeave={()=> removePrevSibling()} >
       <p className="navBarFileInfo">{fileNumber}</p>
-      <FontAwesomeIcon className="brain icon" icon={faBrain} />
+      <i className="fa-solid fa-brain"></i>
     </div>
   );
 };
