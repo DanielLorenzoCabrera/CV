@@ -1,18 +1,22 @@
 [
     {
         "name" : "knowledge",
-        "icon" : []
+        "classIcon" : "fa-solid fa-brain",
+        "defaultClass" : ""
+    },
+    {
+        "name" : "open-minded",
+        "classIcon" : "fa-solid fa-user-astronaut",
+        "defaultClass" : ""
     },
     {
         "name" : "knowledge",
-        "icon" : []
+        "classIcon" : "fa-solid fa-brain",
+        "defaultClass" : ""
     },
     {
         "name" : "knowledge",
-        "icon" : []
-    },
-    {
-        "name" : "knowledge",
-        "icon" : []
+        "classIcon" : "fa-solid fa-brain",
+        "defaultClass" : ""
     }
 ]
