@@ -43,7 +43,7 @@ const MainNavBar = () => {
     <div className="mainNavBar">
       <div className="navBarItemContainer">
         {infoNavBarItems.map((file, index) => {
-          const {name, classIcon} = file;
+          const {name, classIcon, defaultClass} = file;
           return (
             <MainNavBarFile
               text={name}
@@ -53,6 +53,7 @@ const MainNavBar = () => {
               className={[assignClassName(classes, index)]}
               removeClasses={removeClasses}
               classIcon={classIcon}
+              defaultClass={defaultClass}
             />
           );
         })}

@@ -2,21 +2,26 @@
     {
         "name" : "knowledge",
         "classIcon" : "fa-solid fa-brain",
-        "defaultClass" : ""
+        "defaultClass" : "knowledge"
     },
     {
-        "name" : "open-minded",
+        "name" : "soft skills",
+        "classIcon" : "fa-solid fa-cat",
+        "defaultClass" : "softSkills"
+    },
+    {
+        "name" : "Certificates",
+        "classIcon" : "fa-solid fa-key",
+        "defaultClass" : "certificates"
+    },
+    {
+        "name" : "experience",
         "classIcon" : "fa-solid fa-user-astronaut",
         "defaultClass" : ""
-    },
-    {
-        "name" : "knowledge",
-        "classIcon" : "fa-solid fa-brain",
-        "defaultClass" : ""
-    },
-    {
-        "name" : "knowledge",
-        "classIcon" : "fa-solid fa-brain",
+    }
+    ,{
+        "name" : "About",
+        "classIcon" : "fa-solid fa-robot",
         "defaultClass" : ""
     }
 ]

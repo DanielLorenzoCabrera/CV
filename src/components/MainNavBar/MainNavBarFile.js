@@ -1,8 +1,20 @@
 import React from "react";
 
-const MainNavBarFile = ({ text, fileNumber, addClasses, className, removeClasses, classIcon}) => {
+const MainNavBarFile = ({
+  text,
+  fileNumber,
+  addClasses,
+  className,
+  removeClasses,
+  classIcon,
+  defaultClass,
+}) => {
   return (
-    <div className={`mainNavBarFile ${className}`} onMouseEnter={() => addClasses(fileNumber)} onMouseLeave={() => removeClasses()}>
+    <div
+      className={`mainNavBarFile ${className} ${defaultClass}`}
+      onMouseEnter={() => addClasses(fileNumber)}
+      onMouseLeave={() => removeClasses()}
+    >
       <p className="navBarFileInfo">{text}</p>
       <i className={classIcon}></i>
     </div>

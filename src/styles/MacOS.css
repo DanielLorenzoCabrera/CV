@@ -1,7 +1,7 @@
 :root {
   --macos-gray: #242633;
   --macos-white: rgb(255, 242, 242);
-  --navBarIconSize: 80px;
+  --navBarIconSize: 70px;
 }
 
 .window.macOS {
@@ -26,11 +26,12 @@
   padding: 0.5em;
   /*transform: translateY(400px);*/
   display: flex;
-  transition: all 0.4s 0.1s;
+  transition: all 0.4s 0.05s;
 }
 
 .macOS .mainNavBar:hover .navBarItemContainer {
   transform: translateY(0);
+  transition: all 0.4s 0.05s;
 }
 
 .macOS .mainNavBarFile {
@@ -44,6 +45,7 @@
   align-items: center;
   height: var(--navBarIconSize);
   width: var(--navBarIconSize);
+  
 }
 
 .macOS .navBarFileInfo {
@@ -59,10 +61,13 @@
 
 .macOS .mainNavBarFile i {
   font-size: 3em;
+  padding: .2em;
+  border-radius: .2em;
+ 
 }
 
 .macOS .mainNavBarFile:hover {
-  transform: scale(1.75) translate(0, -20px);
+  transform: scale(1.75) translate(0, -30px);
   margin: 0 1em;
   transition: all 0.3s 0s;
   cursor: pointer;
@@ -71,7 +76,7 @@
 
 .macOS .mainNavBarFile:hover + .mainNavBarFile,
 .sibling {
-  transform: scale(1.25) translate(0, -10px);
+  transform: scale(1.25) translate(0, -5px);
   transition: all 0.3s 0.05s;
   margin: 0 0.5em;
   transition: all 0.2s 0.05s;
@@ -82,6 +87,26 @@
   opacity: 100;
   transform: translateY(0);
   transition: all 0.2s 0.01s;
-  padding: 0.1em;
+  padding: 0.1em .5em;
   margin: 0.4em 0;
+  text-transform: capitalize;
+}
+
+.macOS .mainNavBarFile:hover i{
+    filter: saturate(200%);
+}
+
+.macOS .knowledge i{
+    color: #f48be2;
+    background-color: var(--macos-white);
+}
+
+.macOS .softSkills i {
+    color: var(--macos-gray);
+}
+
+.macOS .certificates i {
+    border-radius: 50%;
+    color: var(--macos-white);
+    background-color: #005ff9;
 }
