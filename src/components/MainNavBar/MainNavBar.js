@@ -24,10 +24,7 @@ const MainNavBar = () => {
   };
 
   const assignClassName = (classes, index) => {
-    if (index === classes.actual) return "actual";
-    if (index === classes.prevSibling || index === classes.nextSibling)
-      return "sibling";
-    return;
+    return (index === classes.prevSibling) && "sibling";
   };
 
   const removeClasses = () => {
