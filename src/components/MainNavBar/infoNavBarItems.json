@@ -6,22 +6,22 @@
     },
     {
         "name" : "soft skills",
-        "classIcon" : "fa-solid fa-cat",
+        "classIcon" : "fa-solid fa-spaghetti-monster-flying",
         "defaultClass" : "softSkills"
     },
     {
         "name" : "Certificates",
-        "classIcon" : "fa-solid fa-key",
+        "classIcon" : "fa-solid fa-medal",
         "defaultClass" : "certificates"
     },
     {
         "name" : "experience",
         "classIcon" : "fa-solid fa-user-astronaut",
-        "defaultClass" : ""
+        "defaultClass" : "experience"
     }
     ,{
         "name" : "About",
-        "classIcon" : "fa-solid fa-robot",
-        "defaultClass" : ""
+        "classIcon" : "fa-solid fa-ghost",
+        "defaultClass" : "about"
     }
 ]
