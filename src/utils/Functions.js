@@ -15,5 +15,6 @@ export const getDate = () => {
     "DEC",
   ];
   const date = new Date();
-  return `${days[date.getDay() - 1]} ${date.getDate()} ${months[date.getMonth()]} ${date.getHours()}:${date.getMinutes()}`
+  const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+  return `${days[date.getDay() - 1]} ${date.getDate()} ${months[date.getMonth()]} ${date.getHours()}:${minutes}`
 };
