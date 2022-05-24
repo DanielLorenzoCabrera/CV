@@ -156,7 +156,7 @@
 
 .macOS .about:hover i {
   background-color: var(--macos-white);
-  animation: switchColors 2s 0s linear infinite normal both;
+  animation: switchColors 2s 0s linear infinite alternate both;
 }
 
 .macOS .auxNavBar {
@@ -251,25 +251,25 @@
   }
   100% {
     background-size: 300%;
-    background-position: 50% 50%;
+    background-position: 30% 50%;
   }
 }
 
 @keyframes switchColors {
   0% {
-    color: #EE7B30;
+    color: #ee7b30;
   }
   25% {
     color: #f7accf;
   }
   50% {
-    color: #92dce5;
+    color: #8661c1;
   }
-  75%{
-    color: #011638;
+  75% {
+    
+    color:#256EFF;
   }
-  100%{
-    color: #8661C1;
-
+  100% {
+    color: #2fd141;
   }
 }
