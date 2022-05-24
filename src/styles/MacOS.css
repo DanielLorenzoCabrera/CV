@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&family=Staatliches&display=swap");
 
 :root {
   --macos-gray: #242633;
-  --macos-gray-rgb : rgba(36,38,51,.6);
+  --macos-gray-rgb: rgba(36, 38, 51, 0.6);
   --macos-white: rgb(255, 242, 242);
   --blue: #005ff9;
   --pink: #f48be2;
   --black: #000;
-  --yellow : #fccf05;
+  --yellow: #fccf05;
   --navBarIconSize: 50px;
-  --macos-font : 'Roboto', sans-serif;
+  --macos-font: "Roboto", sans-serif;
+  --macos-red: #ff4e4e;
+  --macos-grey: #00cb1c;
 }
 
 * {
@@ -38,13 +40,13 @@
   backdrop-filter: blur(500px);
   border-radius: 1em;
   padding: 0.5em;
-  transform: translateY(400px);
+  /*transform: translateY(400px);*/
   display: flex;
   transition: all 0.4s 0.05s;
 }
 
 .macOS .mainNavBar:hover .navBarItemContainer {
-  transform: translateY(.2em);
+  transform: translateY(0.2em);
   transition: all 0.4s 0.05s;
 }
 
@@ -65,7 +67,7 @@
 .macOS .navBarFileInfo {
   opacity: 0;
   font-size: 0;
-  background-color: var(--macos-gray);
+  background-color: var(--macos-gray-rgb);
   color: var(--macos-white);
   text-align: center;
   transform: translateY(20px);
@@ -84,7 +86,11 @@
 }
 
 .macOS .mainNavBarFile:hover {
-  transform: scale(1.75) translate(0, -30px);
+  margin: 0 1em;
+}
+
+.macOS .mainNavBarFile:hover > i {
+  transform: scale(1.55) translate(0, -30px);
   margin: 0 2em;
   cursor: pointer;
   transition: all 0.15s 0s ease-out;
@@ -99,9 +105,9 @@
 }
 
 .macOS .mainNavBarFile:hover .navBarFileInfo {
-  font-size: 0.6em;
+  font-size: 1em;
   opacity: 100;
-  transform: translateY(0);
+  transform: translateY(-4em);
   transition: all 0.2s 0.01s;
   padding: 0.1em 0.5em;
   margin: 0.4em 0;
@@ -132,7 +138,15 @@
 .macOS .experience i {
   color: var(--macos-white);
   background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  background-image: url("../assets/img/giphy.webp");
+  background-size: cover;
+  background-position: -200% 0%;
+}
 
+.macOS .experience:hover i {
+  background-size: 200%;
+  background-position: 50% 50%;
+  animation: moveBackground 5s 0s ease-in-out infinite alternate both;
 }
 
 .macOS .about i {
@@ -141,50 +155,121 @@
 }
 
 .macOS .about:hover i {
-  color: var(--black);
   background-color: var(--macos-white);
+  animation: switchColors 2s 0s linear infinite normal both;
 }
 
-
-.macOS .auxNavBar{
+.macOS .auxNavBar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  padding: .3em ;
+  padding: 0.3em;
   background-color: rgba(131, 122, 122, 0.8);
 }
 
-.macOS .auxNavBar i{
+.macOS .auxNavBar i {
   font-size: 1em;
   width: 2em;
   display: flex;
   justify-content: center;
   color: var(--macos-white);
-  margin: 0 .3em;
-  
+  margin: 0 0.3em;
 }
 
-.macOS .auxNavBar .fa-apple{
+.macOS .auxNavBar .fa-apple {
   margin: 0 auto 0 0;
   font-size: 1.2em;
 }
 
-.macOS .auxNavBar .datetime{
+.macOS .auxNavBar .datetime {
   margin-right: 1em;
 }
 
 .macOS .auxNavBar figure {
- max-width: 20px;
- display: flex;
- margin: 0 .5em ;
+  max-width: 20px;
+  display: flex;
+  margin: 0 0.5em;
 }
-.macOS .auxNavBar figure img{
+.macOS .auxNavBar figure img {
   width: 100%;
 }
 
-.macOS .auxNavBar .datetime{
+.macOS .auxNavBar .datetime {
   color: var(--macos-white);
-  font-size: .9em;
+  font-size: 0.9em;
   font-family: var(--macos-font);
+}
+
+.macOS .modalContainer {
+  flex: 6 1 70vh;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.macOS .modalContainer .modal {
+  flex: 1 1 300px;
+  max-width: 1024px;
+  height: 90%;
+  border-radius: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--macos-gray);
+}
+
+.macOS .modalContainer .modal .modal-header {
+  background-color: rgba(131, 122, 122, 0.4);
+  border-radius: 1em 1em 0 0;
+  padding: 1em;
+  display: flex;
+}
+
+.macOS .modalContainer .modal .modal-icon {
+  padding: 0.4em;
+  margin: 0 0.2em;
+  border-radius: 50%;
+}
+
+.macOS .modalContainer .modal .modal-icon.close {
+  background-color: var(--macos-red);
+}
+.macOS .modalContainer .modal .modal-icon.minimize {
+  background-color: var(--yellow);
+}
+.macOS .modalContainer .modal .modal-icon.expand {
+  background-color: var(--macos-grey);
+}
+
+/* Effects */
+
+@keyframes moveBackground {
+  0% {
+    background-size: 100%;
+    background-position: 0%;
+  }
+  100% {
+    background-size: 300%;
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes switchColors {
+  0% {
+    color: #EE7B30;
+  }
+  25% {
+    color: #f7accf;
+  }
+  50% {
+    color: #92dce5;
+  }
+  75%{
+    color: #011638;
+  }
+  100%{
+    color: #8661C1;
+
+  }
 }

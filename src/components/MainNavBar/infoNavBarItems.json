@@ -10,7 +10,7 @@
         "defaultClass" : "softSkills"
     },
     {
-        "name" : "Certificates",
+        "name" : "Certifications",
         "classIcon" : "fa-solid fa-medal",
         "defaultClass" : "certificates"
     },
