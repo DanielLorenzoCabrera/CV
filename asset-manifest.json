@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/React-OSCV/static/css/main.b17dd3ad.css",
+    "main.js": "/React-OSCV/static/js/main.4331a555.js",
+    "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
+    "static/media/macOS_background_light.jpg": "/React-OSCV/static/media/macOS_background_light.f722d23ee1aa5c7e65a9.jpg",
+    "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
+    "static/media/siri_dark.webp": "/React-OSCV/static/media/siri_dark.54603504965d42343dd6.webp",
+    "index.html": "/React-OSCV/index.html",
+    "main.b17dd3ad.css.map": "/React-OSCV/static/css/main.b17dd3ad.css.map",
+    "main.4331a555.js.map": "/React-OSCV/static/js/main.4331a555.js.map",
+    "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b17dd3ad.css",
+    "static/js/main.4331a555.js"
+  ]
+}
