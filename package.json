@@ -1,4 +1,5 @@
 {
+  "homepage" : "https://daniellorenzocabrera.github.io/React-OSCV/",
   "name": "oscv",
   "version": "0.1.0",
   "private": true,
@@ -16,9 +17,12 @@
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
+    "gh-pages": "^4.0.0",
     "webpack": "^5.70.0"
   },
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

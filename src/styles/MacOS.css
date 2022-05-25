@@ -87,6 +87,7 @@
 
 .macOS .mainNavBarFile:hover {
   margin: 0 1em;
+  
 }
 
 .macOS .mainNavBarFile:hover > i {
@@ -112,6 +113,9 @@
   padding: 0.1em 0.5em;
   margin: 0.4em 0;
   text-transform: capitalize;
+  display: flex;
+  flex-flow:  row nowrap;
+  white-space: nowrap;
 }
 
 .macOS .mainNavBarFile:hover i {
