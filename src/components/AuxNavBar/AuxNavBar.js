@@ -1,6 +1,4 @@
 import { macOS } from "./AuxNavBarItems";
-import { getDate } from "../../utils/Functions";
-import { useState, useEffect } from "react";
 import Clock from "../common/Clock";
 
 const AuxNavBar = ({ className }) => {
