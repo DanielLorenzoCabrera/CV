@@ -1,4 +1,5 @@
 import Links from "./Links.json";
+import info from "./About.json";
 const About = () => {
   return (
     <article className="about">
@@ -28,7 +29,12 @@ const About = () => {
         </div>
       </section>
       <section className="right-side">
-        
+        {info.map((item, index) =>{
+          return (<div key={index}>
+            <h3>{item.title}</h3>
+            <p>{item.content}</p>
+          </div>)
+        })}
       </section>
     </article>
   );

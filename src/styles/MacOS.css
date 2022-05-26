@@ -26,6 +26,7 @@
 .window.macOS {
   background-image: url("../assets/img/macOS_background_light.jpg");
   background-size: cover;
+  position: relative;
 }
 
 .macOS .mainNavBar {
@@ -223,6 +224,7 @@
   display: flex;
   flex-flow: column nowrap;
   background-color: var(--macos-gray);
+  overflow: hidden;
 }
 
 .macOS .modalContainer .modal .modal-header {
@@ -360,6 +362,29 @@
 .macOS article.about .right-side {
   flex: 2 1 300px;
   background-color: var(--macos-white);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+
+.macOS article.about .right-side > div {
+  margin: 1em 0;
+}
+
+.macOS article.about .right-side > div h3{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: var(--macos-gray);
+  animation: switchColors 50s 0s linear infinite alternate both;
+
+}
+
+.macOS article.about .right-side > div p{
+  font-family: var(--macos-font);
+  letter-spacing: .2em;
+  line-height: 2em;
 }
 
 
@@ -408,7 +433,7 @@
     background-color: #256eff;
   }
   100% {
-    backgr¡ound-color: #2fd141;
+    background-color: #2fd141;
   }
 }
 
