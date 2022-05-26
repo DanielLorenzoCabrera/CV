@@ -1,6 +1,5 @@
 import Links from "./Links.json";
 const About = () => {
-  console.log(Links);
   return (
     <article className="about">
       <section className="left-side">
@@ -13,7 +12,9 @@ const About = () => {
           <h1>
             <span>Daniel</span> Lorenzo
           </h1>
-          <h2>developer</h2>
+          <h2>
+            Software <span>Developer</span>
+          </h2>
           <q>Life is a matter of attitude</q>
         </div>
         <div className="links">
@@ -26,7 +27,9 @@ const About = () => {
           })}
         </div>
       </section>
-      <section className="right-side"></section>
+      <section className="right-side">
+        
+      </section>
     </article>
   );
 };
