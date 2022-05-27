@@ -175,7 +175,7 @@
 }
 
 .macOS .modalContainer {
-  flex: 6 1 70vh;
+  flex: 5 1 70vh;
   max-height: 85vh;
   display: flex;
   justify-content: center;
@@ -184,8 +184,7 @@
 
 .macOS .modalContainer .modal {
   flex: 1 1 300px;
-  width: 100%;
-  
+  height: 100% ;
   border-radius: 1em;
   display: flex;
   flex-flow: column nowrap;
@@ -441,7 +440,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 580px) {
   .macOS .navBarItemContainer {
     transform: translateY(400px);
   }
@@ -481,8 +480,9 @@
     filter: saturate(200%);
   }
 
-  .modal{
+  .macOS .modalContainer .modal{
     max-width: 1024px;
+    height: 70vh;
   }
   
 }
