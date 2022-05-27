@@ -228,6 +228,10 @@
   overflow-y: scroll;
 }
 
+.macOS article.about > *{
+  height: 80vh;
+}
+
 .macOS article.about .left-side {
   flex: 1 1 250px;
   display: flex;
@@ -483,6 +487,10 @@
   .macOS .modalContainer .modal{
     max-width: 1024px;
     height: 70vh;
+  }
+
+  .macOS article.about > *{
+    max-height: 100%;
   }
   
 }
