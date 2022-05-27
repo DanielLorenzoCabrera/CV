@@ -30,7 +30,6 @@
 }
 
 .macOS .mainNavBar {
-  padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +38,11 @@
 
 .macOS .navBarItemContainer {
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   background-color: rgba(223, 208, 208, 0.5);
   backdrop-filter: blur(500px);
   border-radius: 1em;
   padding: 0.5em;
-  /*transform: translateY(400px);*/
   display: flex;
   transition: all 0.4s 0.05s;
 }
@@ -61,10 +59,11 @@
   cursor: pointer;
   transition: all 0.4s;
   text-align: center;
-  flex: 1;
+  flex: 1 1 var(--navBarIconSize);
   align-items: center;
-  height: var(--navBarIconSize);
-  width: var(--navBarIconSize);
+  max-height: var(--navBarIconSize);
+  max-width: var(--navBarIconSize);
+  
   margin: 0 0.5em;
 }
 
@@ -86,44 +85,10 @@
   border-radius: 0.2em;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: var(--navBarIconSize);
+  
 }
 
-.macOS .mainNavBarFile:hover {
-  margin: 0 1em;
-}
-
-.macOS .mainNavBarFile:hover > i {
-  transform: scale(1.55) translate(0, -30px);
-  margin: 0 2em;
-  cursor: pointer;
-  transition: all 0.15s 0s ease-out;
-  z-index: 20;
-}
-
-.macOS .mainNavBarFile:hover + .mainNavBarFile,
-.sibling {
-  transform: scale(1.25) translate(0, -5px);
-  margin: 0 0.5em;
-  transition: all 0.2s 0.05s ease-out;
-}
-
-.macOS .mainNavBarFile:hover .navBarFileInfo {
-  font-size: 1em;
-  opacity: 100;
-  transform: translateY(-4em);
-  transition: all 0.2s 0.01s;
-  padding: 0.1em 0.5em;
-  margin: 0.4em 0;
-  text-transform: capitalize;
-  display: flex;
-  flex-flow: row nowrap;
-  white-space: nowrap;
-}
-
-.macOS .mainNavBarFile:hover i {
-  filter: saturate(200%);
-}
 
 .macOS .knowledge i {
   color: var(--pink);
@@ -167,6 +132,7 @@
 }
 
 .macOS .auxNavBar {
+  display: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -210,7 +176,7 @@
 
 .macOS .modalContainer {
   flex: 6 1 70vh;
-  max-height: 80vh;
+  max-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,8 +184,8 @@
 
 .macOS .modalContainer .modal {
   flex: 1 1 300px;
-  max-width: 1024px;
-  height: 90%;
+  width: 100%;
+  
   border-radius: 1em;
   display: flex;
   flex-flow: column nowrap;
@@ -373,8 +339,6 @@
   text-align: left;
 }
 
-
-
 .macOS article.about .right-side > div h3 {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -385,8 +349,8 @@
   align-items: center;
 }
 
-.macOS article.about .right-side > div h3 span{
-  margin: 0 .5em;
+.macOS article.about .right-side > div h3 span {
+  margin: 0 0.5em;
 }
 
 .macOS article.about .right-side > div p {
@@ -394,7 +358,7 @@
   line-height: 2em;
 }
 
-.macOS article.about .right-side > div p:nth-last-child(2){
+.macOS article.about .right-side > div p:nth-last-child(2) {
   margin-top: 2em;
   text-align: center;
 }
@@ -475,4 +439,50 @@
   100% {
     transform: scale(1.2);
   }
+}
+
+@media (min-width: 500px) {
+  .macOS .navBarItemContainer {
+    transform: translateY(400px);
+  }
+  .macOS .mainNavBarFile:hover {
+    margin: 0 1em;
+  }
+  
+  .macOS .mainNavBarFile:hover > i {
+    transform: scale(1.55) translate(0, -30px);
+    margin: 0 2em;
+    cursor: pointer;
+    transition: all 0.15s 0s ease-out;
+    z-index: 20;
+  }
+  
+  .macOS .mainNavBarFile:hover + .mainNavBarFile,
+  .sibling {
+    transform: scale(1.25) translate(0, -5px);
+    margin: 0 0.5em;
+    transition: all 0.2s 0.05s ease-out;
+  }
+  
+  .macOS .mainNavBarFile:hover .navBarFileInfo {
+    font-size: 1em;
+    opacity: 100;
+    transform: translateY(-4em);
+    transition: all 0.2s 0.01s;
+    padding: 0.1em 0.5em;
+    margin: 0.4em 0;
+    text-transform: capitalize;
+    display: flex;
+    flex-flow: row nowrap;
+    white-space: nowrap;
+  }
+  
+  .macOS .mainNavBarFile:hover i {
+    filter: saturate(200%);
+  }
+
+  .modal{
+    max-width: 1024px;
+  }
+  
 }
