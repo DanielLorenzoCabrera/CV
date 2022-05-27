@@ -32,7 +32,9 @@ const About = () => {
         {info.map((item, index) =>{
           return (<div key={index}>
             <h3>{item.title}</h3>
-            <p>{item.content}</p>
+            {item.content.map((p, ind)=>{
+              return <p>{p}</p>
+            })}
           </div>)
         })}
       </section>

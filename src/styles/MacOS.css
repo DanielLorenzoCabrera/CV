@@ -240,6 +240,10 @@
   border-radius: 50%;
 }
 
+.macOS .modalContainer .modal .modal-icon:hover{
+  filter: saturate(90%);
+}
+
 .macOS .modalContainer .modal .modal-icon.close {
   background-color: var(--macos-red);
 }
@@ -257,6 +261,7 @@
   flex-flow: row wrap;
   flex: 1;
   overflow-y: scroll;
+  min-height: 70vh;
 }
 
 .macOS article.about .left-side {
@@ -344,6 +349,7 @@
   justify-content: center;
   align-items: center;
   padding: .5em;
+  margin: 1em 0;
   flex: 1;
 }
 
@@ -371,6 +377,15 @@
 
 .macOS article.about .right-side > div {
   margin: 1em 0;
+  display: flex;
+  flex-flow: column nowrap;
+  flex:1;
+}
+
+.macOS article.about .right-side > div > * {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .macOS article.about .right-side > div h3{
@@ -383,8 +398,17 @@
 
 .macOS article.about .right-side > div p{
   font-family: var(--macos-font);
-  letter-spacing: .2em;
   line-height: 2em;
+  text-align: justify;
+  
+}
+
+
+.macOS article.about .right-side > div p:last-of-type{
+  text-align: center;
+  font-weight: bolder;
+  color: var(--macos-gray);
+  justify-content: center;
 }
 
 
