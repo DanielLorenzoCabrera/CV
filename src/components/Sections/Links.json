@@ -1,5 +1,9 @@
 [
     {
+        "icon" : "fa-brands fa-linkedin",
+        "link" : "https://www.linkedin.com/in/daniellorenzocabrera"
+    },
+    {
         "icon" : "fa-brands fa-github",
         "link" : "https://github.com/DanielLorenzoCabrera"
     },{
@@ -7,10 +11,6 @@
         "link" : "https://www.codewars.com/users/DanielLorenzo22"
     }
     ,{
-        "icon" : "fa-brands fa-linkedin",
-        "link" : "https://www.linkedin.com/in/daniellorenzocabrera"
-    },
-    {
         "icon" : "fa-brands fa-spotify",
         "link" : "https://open.spotify.com/playlist/2Nn8iLVinaW66Mq2WmYCbY?si=ad8cf6d29c854572"
     }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
 :root {
   --macos-gray: #242633;
   --macos-gray-rgb: rgba(36, 38, 51, 0.6);
@@ -9,8 +9,8 @@
   --yellow: #fccf05;
   --navBarIconSize: 50px;
   --macos-font: "Roboto", sans-serif;
-  --mono-font :'Cutive Mono', monospace;;
-  --josefin-font : 'Josefin Sans', sans-serif;
+  --mono-font: "Cutive Mono", monospace;
+  --josefin-font: "Josefin Sans", sans-serif;
   --macos-red: #ff4e4e;
   --macos-grey: #00cb1c;
   --macos-dark-grey: #165e5c;
@@ -24,7 +24,7 @@
 }
 
 .window.macOS {
-  background-image: url("../assets/img/macOS_background_light.jpg");
+  background-image: url("../assets/img/macOS_background_light.jpeg");
   background-size: cover;
   position: relative;
 }
@@ -240,7 +240,7 @@
   border-radius: 50%;
 }
 
-.macOS .modalContainer .modal .modal-icon:hover{
+.macOS .modalContainer .modal .modal-icon:hover {
   filter: saturate(90%);
 }
 
@@ -261,7 +261,6 @@
   flex-flow: row wrap;
   flex: 1;
   overflow-y: scroll;
-  min-height: 70vh;
 }
 
 .macOS article.about .left-side {
@@ -272,43 +271,39 @@
   border-radius: 0 0 0 50%;
 }
 
-.macOS article.about .left-side .profile-img{
+.macOS article.about .left-side .profile-img {
   flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.macOS article.about .left-side .profile-img figure{
+.macOS article.about .left-side .profile-img figure {
   display: flex;
   justify-content: center;
-  flex: .6;
+  flex: 0.6;
   border-radius: 50%;
   margin-top: 1em;
   padding: 0.3em;
   animation: switchBackgroundColor 10s 0s linear infinite alternate both;
-  
-  
 }
 
-.macOS article.about .left-side .profile-img img{
+.macOS article.about .left-side .profile-img img {
   animation: float 10s 0s linear infinite alternate both;
   border-radius: 50%;
   max-width: 100%;
-  
-  
 }
 
-.macOS article.about .left-side .name{
+.macOS article.about .left-side .name {
   text-align: center;
   flex: 1;
 }
 
-.macOS article.about .left-side .name > *{
+.macOS article.about .left-side .name > * {
   margin: 1em 0;
 }
 
-.macOS article.about .left-side .name h1{
+.macOS article.about .left-side .name h1 {
   font-size: 1.5em;
   font-weight: 100 !important;
   color: var(--macos-violet);
@@ -318,52 +313,48 @@
   animation: switchColors 10s 0s linear infinite alternate both;
 }
 
-.macOS article.about .left-side .name span{
+.macOS article.about .left-side .name span {
   font-weight: 500;
 }
 
-.macOS article.about .left-side .name h2{
+.macOS article.about .left-side .name h2 {
   animation: switchColors 10s 3s linear infinite alternate both;
-  font-size: .8em;
+  font-size: 0.8em;
   font-family: var(--josefin-font);
   text-transform: uppercase;
   font-weight: 100;
   color: var(--macos-dark-grey);
-  letter-spacing: .3em;
-  
+  letter-spacing: 0.3em;
 }
 
-.macOS article.about .left-side .name q{
+.macOS article.about .left-side .name q {
   display: flex;
   color: var(--macos-white);
-  padding: .3em 0;
+  padding: 0.3em 0;
   font-family: var(--mono-font);
   margin: 2em 0;
   justify-content: center;
-  
 }
 
-.macOS article.about .left-side .links{
+.macOS article.about .left-side .links {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding: .5em;
+  padding: 0.5em;
   margin: 1em 0;
   flex: 1;
 }
 
-.macOS article.about .left-side .links a i{
+.macOS article.about .left-side .links a i {
   font-size: 1.8em;
   background-color: transparent;
-  margin: 0 .4em;
+  margin: 0 0.4em;
 }
 
-.macOS article.about .left-side .links a i:hover{
-  animation: pop .2s 0s ease-in-out 1 alternate both;
-
+.macOS article.about .left-side .links a i:hover {
+  animation: pop 0.2s 0s ease-in-out 1 alternate both;
 }
-
 
 .macOS article.about .right-side {
   flex: 2 1 300px;
@@ -379,39 +370,40 @@
   margin: 1em 0;
   display: flex;
   flex-flow: column nowrap;
-  flex:1;
+  text-align: left;
 }
 
-.macOS article.about .right-side > div > * {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
 
-.macOS article.about .right-side > div h3{
+
+.macOS article.about .right-side > div h3 {
   font-size: 1.5em;
   text-transform: uppercase;
   color: var(--macos-gray);
   animation: switchColors 50s 0s linear infinite alternate both;
-
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
 }
 
-.macOS article.about .right-side > div p{
+.macOS article.about .right-side > div h3 span{
+  margin: 0 .5em;
+}
+
+.macOS article.about .right-side > div p {
   font-family: var(--macos-font);
   line-height: 2em;
-  text-align: justify;
-  
 }
 
+.macOS article.about .right-side > div p:nth-last-child(2){
+  margin-top: 2em;
+  text-align: center;
+}
 
-.macOS article.about .right-side > div p:last-of-type{
+.macOS article.about .right-side > div p:last-of-type {
   text-align: center;
   font-weight: bolder;
   color: var(--macos-gray);
-  justify-content: center;
 }
-
-
 
 /* Effects */
 
@@ -461,27 +453,26 @@
   }
 }
 
-@keyframes float{
-  0%{
+@keyframes float {
+  0% {
     transform: scale(1);
   }
-  50%{
-    transform: scale(.95);
+  50% {
+    transform: scale(0.95);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
 @keyframes pop {
-  0%{
+  0% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.3);
   }
-  100%{
+  100% {
     transform: scale(1.2);
-
   }
 }

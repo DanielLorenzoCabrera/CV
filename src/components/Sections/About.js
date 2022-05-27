@@ -1,5 +1,6 @@
 import Links from "./Links.json";
 import info from "./About.json";
+import EmojiSwitch from "../common/EmojiSwitch";
 const About = () => {
   return (
     <article className="about">
@@ -31,7 +32,10 @@ const About = () => {
       <section className="right-side">
         {info.map((item, index) =>{
           return (<div key={index}>
-            <h3>{item.title}</h3>
+            <h3>
+              {item.title}
+              <EmojiSwitch time={3}/>
+              </h3>
             {item.content.map((p, ind)=>{
               return <p>{p}</p>
             })}
