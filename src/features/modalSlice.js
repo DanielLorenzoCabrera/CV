@@ -10,7 +10,6 @@ export const modalSlice = createSlice({
   reducers: {
     changeSelected: (state, action) => {
       state.selected = action.payload;
-      console.log(action.payload)
     },
     closeAll: (state) => {
       state.selected = null;
