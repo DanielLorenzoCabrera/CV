@@ -375,6 +375,17 @@
   color: var(--macos-gray);
 }
 
+.macOS .modal.invisible{
+  display: none ;
+  
+
+}
+
+.visible{
+  display: flex;
+  transform: scale(1) translateX(0);
+}
+
 /* Effects */
 
 @keyframes moveBackground {

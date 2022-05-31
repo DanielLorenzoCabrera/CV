@@ -3,7 +3,6 @@ import { Info } from "./Info";
 import EmojiSwitch from "../common/EmojiSwitch";
 const About = () => {
   const { title, content } = Info;
-  console.log("pepe", title);
   return (
     <article className="about">
       <section className="left-side">
@@ -44,4 +43,4 @@ const About = () => {
   );
 };
 
-export default About;
+export {About};
