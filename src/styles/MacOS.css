@@ -17,7 +17,9 @@
   --macos-violet: #7254b9;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,6 +39,7 @@
 }
 
 .macOS .navBarItemContainer {
+  min-width: 250px;
   justify-content: center;
   flex-flow: row nowrap;
   background-color: rgba(223, 208, 208, 0.5);
@@ -45,6 +48,7 @@
   padding: 0.5em;
   display: flex;
   transition: all 0.4s 0.05s;
+  overflow-x: scroll;
 }
 
 .macOS .mainNavBar:hover .navBarItemContainer {
@@ -63,7 +67,7 @@
   align-items: center;
   max-height: var(--navBarIconSize);
   max-width: var(--navBarIconSize);
-  
+
   margin: 0 0.5em;
 }
 
@@ -86,9 +90,7 @@
   display: flex;
   justify-content: center;
   width: var(--navBarIconSize);
-  
 }
-
 
 .macOS .knowledge i {
   color: var(--pink);
@@ -184,7 +186,7 @@
 
 .macOS .modalContainer .modal {
   flex: 1 1 300px;
-  height: 100% ;
+  height: 100%;
   border-radius: 1em;
   display: flex;
   flex-flow: column nowrap;
@@ -228,23 +230,26 @@
   overflow-y: scroll;
 }
 
-.macOS article.about > *{
-  height: 80vh;
-}
-
 .macOS article.about .left-side {
   flex: 1 1 250px;
   display: flex;
   flex-flow: column nowrap;
   background-color: var(--macos-gray);
-  border-radius: 0 0 0 50%;
+}
+
+.macOS article.about .left-side > * {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .macOS article.about .left-side .profile-img {
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
+  
 }
 
 .macOS article.about .left-side .profile-img figure {
@@ -252,7 +257,6 @@
   justify-content: center;
   flex: 0.6;
   border-radius: 50%;
-  margin-top: 1em;
   padding: 0.3em;
   animation: switchBackgroundColor 10s 0s linear infinite alternate both;
 }
@@ -266,18 +270,19 @@
 .macOS article.about .left-side .name {
   text-align: center;
   flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .macOS article.about .left-side .name > * {
-  margin: 1em 0;
+  margin: .5em 0;
 }
 
 .macOS article.about .left-side .name h1 {
   font-size: 1.5em;
-  font-weight: 100 !important;
+  font-weight: 100;
   color: var(--macos-violet);
   font-family: var(--josefin-font);
-  font-weight: 300;
   text-transform: uppercase;
   animation: switchColors 10s 0s linear infinite alternate both;
 }
@@ -297,11 +302,9 @@
 }
 
 .macOS article.about .left-side .name q {
-  display: flex;
   color: var(--macos-white);
   padding: 0.3em 0;
   font-family: var(--mono-font);
-  margin: 2em 0;
   justify-content: center;
 }
 
@@ -310,9 +313,12 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   padding: 0.5em;
-  margin: 1em 0;
   flex: 1;
+}
+.macOS article.about .left-side .links a {
+  margin: 0.5em 0;
 }
 
 .macOS article.about .left-side .links a i {
@@ -330,43 +336,40 @@
   background-color: var(--macos-white);
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-content: center;
-  padding: 2em;
+  padding: 3em;
 }
 
-.macOS article.about .right-side > div {
-  margin: 1em 0;
+.macOS article.about .right-side > * {
+  flex: 1;
   display: flex;
-  flex-flow: column nowrap;
-  text-align: left;
 }
 
-.macOS article.about .right-side > div h3 {
+.macOS article.about .right-side > h3 {
   font-size: 1.5em;
   text-transform: uppercase;
   color: var(--macos-gray);
   animation: switchColors 50s 0s linear infinite alternate both;
   margin-bottom: 1em;
-  display: flex;
-  align-items: center;
+  margin: 1em 0;
 }
 
-.macOS article.about .right-side > div h3 span {
+.macOS article.about .right-side > h3 span {
   margin: 0 0.5em;
 }
 
-.macOS article.about .right-side > div p {
+.macOS article.about .right-side > p {
   font-family: var(--macos-font);
   line-height: 2em;
 }
 
-.macOS article.about .right-side > div p:nth-last-child(2) {
+.macOS article.about .right-side > p:nth-last-child(2) {
   margin-top: 2em;
   text-align: center;
+  justify-content: center;
 }
 
-.macOS article.about .right-side > div p:last-of-type {
+.macOS article.about .right-side > p:last-of-type {
+  justify-content: center;
   text-align: center;
   font-weight: bolder;
   color: var(--macos-gray);
@@ -402,6 +405,7 @@
     color: #2fd141;
   }
 }
+
 @keyframes switchBackgroundColor {
   0% {
     background-color: #ee7b30;
@@ -447,11 +451,12 @@
 @media (min-width: 580px) {
   .macOS .navBarItemContainer {
     transform: translateY(400px);
+    overflow: visible;
   }
   .macOS .mainNavBarFile:hover {
     margin: 0 1em;
   }
-  
+
   .macOS .mainNavBarFile:hover > i {
     transform: scale(1.55) translate(0, -30px);
     margin: 0 2em;
@@ -459,14 +464,14 @@
     transition: all 0.15s 0s ease-out;
     z-index: 20;
   }
-  
+
   .macOS .mainNavBarFile:hover + .mainNavBarFile,
   .sibling {
     transform: scale(1.25) translate(0, -5px);
     margin: 0 0.5em;
     transition: all 0.2s 0.05s ease-out;
   }
-  
+
   .macOS .mainNavBarFile:hover .navBarFileInfo {
     font-size: 1em;
     opacity: 100;
@@ -479,18 +484,17 @@
     flex-flow: row nowrap;
     white-space: nowrap;
   }
-  
+
   .macOS .mainNavBarFile:hover i {
     filter: saturate(200%);
   }
 
-  .macOS .modalContainer .modal{
+  .macOS .modalContainer .modal {
     max-width: 1024px;
     height: 70vh;
   }
 
-  .macOS article.about > *{
+  .macOS article.about > * {
     max-height: 100%;
   }
-  
 }

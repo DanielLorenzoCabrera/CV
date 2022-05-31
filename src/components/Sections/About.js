@@ -1,7 +1,9 @@
 import Links from "./Links.json";
-import info from "./About.json";
+import { Info } from "./Info";
 import EmojiSwitch from "../common/EmojiSwitch";
 const About = () => {
+  const { title, content } = Info;
+  console.log("pepe", title);
   return (
     <article className="about">
       <section className="left-side">
@@ -30,16 +32,12 @@ const About = () => {
         </div>
       </section>
       <section className="right-side">
-        {info.map((item, index) =>{
-          return (<div key={index}>
-            <h3>
-              {item.title}
-              <EmojiSwitch time={3}/>
-              </h3>
-            {item.content.map((p, ind)=>{
-              return <p>{p}</p>
-            })}
-          </div>)
+        <h3>
+          {title}
+          <EmojiSwitch time={3} />
+        </h3>
+        {content.map((text, index) => {
+          return <p key={index}>{text}</p>;
         })}
       </section>
     </article>

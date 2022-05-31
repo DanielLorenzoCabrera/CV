@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://daniellorenzocabrera.github.io/React-OSCV/",
+  "homepage": "https://daniellorenzocabrera.github.io/React-OSCV/",
   "name": "oscv",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "babel-plugin-macros": "^3.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +22,7 @@
     "webpack": "^5.70.0"
   },
   "scripts": {
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
