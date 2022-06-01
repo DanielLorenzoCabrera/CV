@@ -223,6 +223,12 @@
 
 /* sections */
 
+.macOS article.knowledge {
+  background-color: red;
+  flex: 1;
+}
+
+
 .macOS article.about {
   display: flex;
   flex-flow: row wrap;
@@ -375,12 +381,14 @@
   color: var(--macos-gray);
 }
 
+
+
+
+/* OPEN & CLOSE MODAL */
+
 .macOS .modal.invisible{
   display: none ;
   transform: translate(400px);
-  
-  
-
 }
 
 .visible{
@@ -465,12 +473,12 @@
 
 @keyframes popModal {
   0% {
-    transform: scale(0);
+    transform: scale(0) translateY(500px);
     opacity: 0;
   }
   
   100% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
     opacity: 100;
   }
 }

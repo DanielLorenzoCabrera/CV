@@ -1,6 +1,6 @@
-import Links from "./Links.json";
-import { Info } from "./Info";
-import EmojiSwitch from "../common/EmojiSwitch";
+import Links from "../Links.json";
+import { Info } from "../Info";
+import EmojiSwitch from "../../common/EmojiSwitch";
 const About = () => {
   const { title, content } = Info;
   return (
@@ -8,7 +8,7 @@ const About = () => {
       <section className="left-side">
         <div className="profile-img">
           <figure>
-            <img src={require("../../assets/img/profile.jpg")} alt="" />
+            <img src={require("../../../assets/img/profile.jpg")} alt="" />
           </figure>
         </div>
         <div className="name">

@@ -1,2 +1,2 @@
-export * from './About';
-export * from './Knowledge';
+export * from './about/About';
+export * from './knowledge/Knowledge';

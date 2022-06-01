@@ -1,0 +1,65 @@
+[
+  {
+    "title": "fontend",
+    "skills": [
+      {
+        "name": "React",
+        "icon": "fa-brands fa-react"
+      },
+      {
+        "name": "React-Native",
+        "icon": "fa-brands fa-react"
+      },
+      {
+        "name": "Vanilla JS",
+        "icon": "fa-brands fa-js-square"
+      },
+      {
+        "name": "CSS",
+        "icon": "fa-brands fa-css3"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "fa-brands fa-bootstrap"
+      },
+      {
+        "name": "HTML",
+        "icon": "fa-brands fa-html5"
+      }
+    ]
+  },
+  {
+    "title": "backend",
+    "skills": [
+      {
+        "name": "Laravel",
+        "icon": "fa-brands fa-laravel"
+      },
+      {
+        "name": "PHP",
+        "icon": "fa-brands fa-php"
+      },
+      {
+        "name": "MySQL",
+        "icon": "fa-solid fa-database"
+      }
+    ]
+  },
+  {
+    "title": "Code & Tools",
+    "skills": [
+      {
+        "name": "Git",
+        "icon": "fa-brands fa-git-alt"
+      },
+      {
+        "name": "Github",
+        "icon": "fa-brands fa-github-alt"
+      },
+      {
+        "name": "Trello",
+        "icon": "fa-brands fa-trello"
+      }
+    ]
+  }
+]
