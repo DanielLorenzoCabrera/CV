@@ -3,6 +3,7 @@ import Skill from "./Skill";
 const KnowledgeSection = ({ skills, title }) => {
   return (
     <section className="knowledgeSection">
+      <h2>{title}</h2>
       <div>
         {skills.map((skill, index) => {
           return (
@@ -10,7 +11,6 @@ const KnowledgeSection = ({ skills, title }) => {
           );
         })}
       </div>
-      <h2>{title}</h2>
     </section>
   );
 };
