@@ -13,7 +13,7 @@
   --josefin-font: "Josefin Sans", sans-serif;
   --macos-red: #ff4e4e;
   --macos-grey: #00cb1c;
-  --macos-dark-grey: #165e5c;
+  --macos-dark-green: #165e5c;
   --macos-violet: #7254b9;
 }
 
@@ -224,10 +224,92 @@
 /* sections */
 
 .macOS article.knowledge {
-  background-color: red;
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: scroll;
+}
+
+.macOS article.knowledge h3 {
+  text-align: center;
+  margin: 0.5em 0;
+  color: var(--macos-white);
+  font-family: var(--mono-font);
+  font-size: 2em;
+  opacity: 0;
+  display: none;
+}
+
+.macOS article.knowledge > section {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.macOS .knowledgeSection {
+  background-color: var(--macos-white);
+  flex: 1 1 300px;
+  min-height: 70%;
+  margin: 3em 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 0.2em;
+  position: relative;
+  z-index: 10;
+}
+
+.macOS .knowledgeSection h2 {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  border-radius: 0.2em;
+  font-family: var(--josefin-font);
+  color: var(--macos-white);
+  font-size: 3em;
+  opacity: 0;
+}
+
+.macOS .knowledgeSection:hover {
+  animation: switchBoxShadowColor 4s 0s linear infinite alternate both;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.macOS .knowledgeSection:hover h2 {
+  text-shadow: 0 0 0.1em var(--macos-white);
+  top: -0.7em;
+  opacity: 100;
+  transition: all 0.2s 0s;
+}
+
+.macOS .knowledgeSection > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
   flex: 1;
 }
 
+.macOS .knowledgeSection .skill {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1em;
+  flex: 1 1 30%;
+  font-family: var(--josefin-font);
+  font-weight: 100;
+  text-align: center;
+}
+
+.macOS .knowledgeSection .skill i {
+  font-size: 3em;
+  background-color: transparent;
+  color: var(--macos-gray);
+  margin: 0.2em 0;
+}
 
 .macOS article.about {
   display: flex;
@@ -255,7 +337,6 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  
 }
 
 .macOS article.about .left-side .profile-img figure {
@@ -281,7 +362,7 @@
 }
 
 .macOS article.about .left-side .name > * {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .macOS article.about .left-side .name h1 {
@@ -303,7 +384,7 @@
   font-family: var(--josefin-font);
   text-transform: uppercase;
   font-weight: 100;
-  color: var(--macos-dark-grey);
+  color: var(--macos-dark-green);
   letter-spacing: 0.3em;
 }
 
@@ -381,22 +462,18 @@
   color: var(--macos-gray);
 }
 
-
-
-
 /* OPEN & CLOSE MODAL */
 
-.macOS .modal.invisible{
-  display: none ;
+.macOS .modal.invisible {
+  display: none;
   transform: translate(400px);
 }
 
-.visible{
+.visible {
   display: flex;
   transform: scale(1) translateX(0);
-  animation: popModal .2s 0s linear 1 alternate both;
+  animation: popModal 0.2s 0s linear 1 alternate both;
 }
-
 
 /* Effects */
 
@@ -447,6 +524,25 @@
   }
 }
 
+@keyframes switchBoxShadowColor {
+  0% {
+
+    box-shadow: 0 0 1em #ee7b30;
+  }
+  25% {
+    box-shadow: 0 0 1em #f7accf;
+  }
+  50% {
+    box-shadow: 0 0 1em #8661c1;
+  }
+  75% {
+    box-shadow: 0 0 1em #256eff;
+  }
+  100% {
+    box-shadow: 0 0 1em #2fd141;
+  }
+}
+
 @keyframes float {
   0% {
     transform: scale(1);
@@ -476,14 +572,12 @@
     transform: scale(0) translateY(500px);
     opacity: 0;
   }
-  
+
   100% {
     transform: scale(1) translateY(0);
     opacity: 100;
   }
 }
-
-
 
 /* End effects */
 

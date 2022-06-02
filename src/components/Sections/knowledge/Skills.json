@@ -1,13 +1,13 @@
 [
   {
-    "title": "fontend",
+    "title": "frontend",
     "skills": [
       {
         "name": "React",
         "icon": "fa-brands fa-react"
       },
       {
-        "name": "React-Native",
+        "name": "React Native",
         "icon": "fa-brands fa-react"
       },
       {
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "title": "Code & Tools",
+    "title": "Tools",
     "skills": [
       {
         "name": "Git",

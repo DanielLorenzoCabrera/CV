@@ -1,0 +1,60 @@
+:root{
+    --react : #5CD0EE;
+    --javascript : #EAD41D;
+    --css3 : #0065B6;
+    --html5 : #D84925;
+    --bootstrap : #7014ED;
+    --laravel: #F12C1F;
+    --php : #7175A9;
+    --mysql : #005C83;
+    --git : #E44D30;
+    --github: #5E2476;
+    --trello: #0173B5;
+
+}
+
+
+
+.macOS article.knowledge .skill .fa-react{
+    color: var(--react);
+}
+
+.macOS article.knowledge .skill .fa-js-square{
+    color: var(--javascript);
+}
+
+.macOS article.knowledge .skill .fa-css3{
+    color: var(--css3);
+}
+
+.macOS article.knowledge .skill .fa-bootstrap{
+    color: var(--bootstrap);
+}
+
+.macOS article.knowledge .skill .fa-html5{
+    color: var(--html5);
+}
+
+.macOS article.knowledge .skill .fa-laravel{
+    color: var(--laravel);
+}
+
+.macOS article.knowledge .skill .fa-php{
+    color: var(--php);
+}
+
+.macOS article.knowledge .skill .fa-database{
+    color: var(--mysql);
+}
+
+.macOS article.knowledge .skill .fa-git-alt{
+    color: var(--git);
+}
+
+.macOS article.knowledge .skill .fa-github-alt{
+    color: var(--github);
+}
+
+.macOS article.knowledge .skill .fa-trello{
+    color: var(--trello);
+}
