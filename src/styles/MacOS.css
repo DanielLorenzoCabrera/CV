@@ -230,15 +230,6 @@
   overflow-y: scroll;
 }
 
-.macOS article.knowledge h3 {
-  text-align: center;
-  margin: 0.5em 0;
-  color: var(--macos-white);
-  font-family: var(--mono-font);
-  font-size: 2em;
-  opacity: 0;
-  display: none;
-}
 
 .macOS article.knowledge > section {
   display: flex;
@@ -277,7 +268,6 @@
 
 
 .macOS .knowledgeSection:hover h2 {
-  text-shadow: 0 0 0.1em var(--macos-white);
   transition: all 0.08s 0s;
 }
 

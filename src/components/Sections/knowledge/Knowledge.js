@@ -4,7 +4,6 @@ import KnowledgeSection from "./KnowledgeSection";
 const Knowledge = () => {
   return (
     <article className="knowledge">
-      <h3>Knowledge</h3>
       <section>
         {Skills.map((section, index) => {
           return (
