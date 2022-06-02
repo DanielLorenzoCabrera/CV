@@ -2,6 +2,7 @@
 :root {
   --macos-gray: #242633;
   --macos-gray-rgb: rgba(36, 38, 51, 0.6);
+  --macos-white-rgb: rgba(255, 255, 255, 0.6);
   --macos-white: rgb(255, 242, 242);
   --blue: #005ff9;
   --pink: #f48be2;
@@ -254,7 +255,7 @@
 }
 
 .macOS .knowledgeSection h2 {
-  margin: 1em 0;
+  margin: .5em 0;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--josefin-font);
@@ -275,7 +276,7 @@
   display: flex;
   flex-flow: row wrap;
   flex: 1;
-  justify-content: center;
+
 
 }
 
@@ -313,6 +314,10 @@
  text-align: center;
  transform: translateY(0);
  transition: all .4s 0s ease-in-out ;
+ max-width: 50%;
+ background-color: var(--macos-white-rgb);
+ margin: 0 auto;
+ border-radius: .2em;
 
 }
 
