@@ -302,28 +302,41 @@
 }
 
 .macOS .knowledgeSection:first-of-type::before {
-  content: "Scroll to see more ➡️";
+  content: 'Scroll down to see more';
   position: absolute;
-  bottom: 0.5em;
   left: 0;
+  bottom: 0.5em;
   right: 0;
+  color: var(--macos-white);
   font-family: var(--josefin-font);
   font-size: 1.5em;
   text-align: center;
   transform: translateY(0);
   transition: all 0.4s 0s ease-in-out;
-  max-width: 50%;
-  background-color: var(--macos-white-rgb);
+  max-width: 300px;
+  background-color: var(--macos-gray-rgb);
   margin: 0 auto;
   border-radius: 0.2em;
+  padding-top: .1em;
+  
 }
+
 
 .macOS article.about {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
   overflow-y: scroll;
+  background-color: var(--macos-white);
+  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar Firefox */
 }
+
+/* hide scrollbar */
+.macOS article.about::-webkit-scrollbar {
+  display: none;
+}
+
 
 .macOS article.about .left-side {
   flex: 1 1 250px;
@@ -634,6 +647,7 @@
   .macOS .knowledgeSection:first-of-type::before {
     transform: translateY(500px);
     transition: all 0.4s 0s ease-in-out;
+    
   }
   .macOS .knowledgeSection:first-of-type:hover::before {
     transform: translateY(0);

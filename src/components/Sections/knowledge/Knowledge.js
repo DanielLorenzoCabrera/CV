@@ -2,40 +2,31 @@ import Skills from "./Skills.json";
 import KnowledgeSection from "./KnowledgeSection";
 import { useState, useEffect } from "react";
 
-
 const Knowledge = () => {
   const [positionX, updatePositionX] = useState(0);
-  const [scrolling, isScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
   
-  const roundTranslation = (translation) =>{
-    const modalSize = document.querySelector("article.knowledge").clientWidth 
-
-    if(translation < 0 ) return -modalSize;
-    return modalSize;
-    
-  }
-  
-  const waitPositionMovement =  () =>  {
+  const setStateNoScrolling = () => {
     setTimeout(() => {
-      isScrolling(false)
-    }, 1000)
-  }
-
+      setScrolling(false);
+    }, 1000);
+  };
+  
   useEffect(() => {
     const element = document.querySelector("article.knowledge");
-    element.scrollLeft =  positionX;
-    waitPositionMovement();
-  })
-  
+    element.scrollLeft = positionX;
+    setStateNoScrolling();
+  });
   
   const handlePositionChange = (event) => {
-    const modalSize = document.querySelector("article.knowledge").clientWidth
-    if(scrolling) return; 
-    isScrolling(true)
+    if (scrolling) return;
+    setScrolling(true);
+    const modalSize = document.querySelector("article.knowledge").clientWidth;
+    const sizeTranslation = event.deltaY < 0 ? -modalSize : modalSize;
     updatePositionX((prev) => {
-      if(prev + roundTranslation(event.deltaY) < 0 ) return 0;
-      if(prev + roundTranslation(event.deltaY) > modalSize * 2) return modalSize * 2;
-      return prev + roundTranslation(event.deltaY);
+      if (prev + sizeTranslation <= 0) return 0;
+      if (prev+ sizeTranslation >= modalSize * 2) return modalSize * 2;
+      return prev + sizeTranslation;
     });
   };
 
