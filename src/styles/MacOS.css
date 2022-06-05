@@ -228,18 +228,20 @@
   flex: 1;
   display: flex;
   flex-flow: column nowrap;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 
-.macOS article.knowledge > section {
+.macOS article.knowledge  {
   display: flex;
   flex: 1;
   flex-flow: row nowrap;
   width: 100%;
+  max-width: 300%;
   scroll-snap-type: x mandatory;
   overflow-y: hidden;
-  
+  transform: translateX(0);
+  scroll-behavior: smooth;
 }
 
 .macOS .knowledgeSection {
@@ -247,37 +249,35 @@
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-  min-width: 100% ;
+  min-width: 100%;
   height: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   position: relative;
+  cursor: all-scroll;
   
 }
 
 .macOS .knowledgeSection h2 {
-  margin: .5em 0;
+  margin: 0.5em 0;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--josefin-font);
   font-weight: bolder;
   color: var(--macos-gray);
   font-size: 3em;
-  animation: switchColors 10s 0s linear infinite alternate both, float 5s 0s linear infinite alternate both;
-
-  
+  animation: switchColors 10s 0s linear infinite alternate both,
+    float 5s 0s linear infinite alternate both;
 }
-
 
 .macOS .knowledgeSection:hover h2 {
   transition: all 0.08s 0s;
+  transform: translateX(20%);
 }
 
 .macOS .knowledgeSection > div {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
-
-
 }
 
 .macOS .knowledgeSection .skill {
@@ -297,28 +297,25 @@
   margin: 0.2em 0;
 }
 
-.macOS .knowledgeSection .skill i:hover{
+.macOS .knowledgeSection .skill i:hover {
   animation: pop 0.2s 0s ease-in-out 1 alternate both;
 }
 
-
-
-.macOS .knowledgeSection:first-of-type::before{
- content: 'Scroll to see more ➡️';
- position: absolute;
- bottom: .5em;
- left: 0;
- right: 0;
- font-family: var(--josefin-font);
- font-size: 1.5em;
- text-align: center;
- transform: translateY(0);
- transition: all .4s 0s ease-in-out ;
- max-width: 50%;
- background-color: var(--macos-white-rgb);
- margin: 0 auto;
- border-radius: .2em;
-
+.macOS .knowledgeSection:first-of-type::before {
+  content: "Scroll to see more ➡️";
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  right: 0;
+  font-family: var(--josefin-font);
+  font-size: 1.5em;
+  text-align: center;
+  transform: translateY(0);
+  transition: all 0.4s 0s ease-in-out;
+  max-width: 50%;
+  background-color: var(--macos-white-rgb);
+  margin: 0 auto;
+  border-radius: 0.2em;
 }
 
 .macOS article.about {
@@ -573,18 +570,14 @@
   0% {
     font-weight: 100;
   }
-  50%{
+  50% {
     font-weight: 300;
-    
   }
-  
+
   100% {
     font-weight: bolder;
-    
   }
 }
-
-
 
 /* End effects */
 
@@ -638,12 +631,12 @@
     max-height: 100%;
   }
 
-  .macOS .knowledgeSection:first-of-type::before{
+  .macOS .knowledgeSection:first-of-type::before {
     transform: translateY(500px);
-    transition: all .4s 0s ease-in-out ;
+    transition: all 0.4s 0s ease-in-out;
   }
-  .macOS .knowledgeSection:first-of-type:hover::before{
+  .macOS .knowledgeSection:first-of-type:hover::before {
     transform: translateY(0);
-    transition: all .4s 0s ease-in-out ;
+    transition: all 0.4s 0s ease-in-out;
   }
 }

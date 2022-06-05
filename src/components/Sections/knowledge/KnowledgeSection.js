@@ -1,8 +1,8 @@
 import Skill from "./Skill";
 
-const KnowledgeSection = ({ skills, title }) => {
+const KnowledgeSection = ({ skills, title ,style}) => {
   return (
-    <section className="knowledgeSection">
+    <section className="knowledgeSection" style={style}>
       <h2>{title}</h2>
       <div>
         {skills.map((skill, index) => {

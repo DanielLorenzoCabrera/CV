@@ -1,10 +1,13 @@
-import './styles/App.css';
-import Window from './components/Window/Window'
+import "./styles/App.css";
+import Window from "./components/Window/Window";
+import { Component } from "react";
 
-function App() {
-  return (
-    <Window/>
-  );
+class App extends Component {
+  render() {
+    return <Window />;
+  }
+
+
 }
 
 export default App;
