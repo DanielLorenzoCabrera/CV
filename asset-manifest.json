@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/React-OSCV/static/css/main.c77ba6d8.css",
-    "main.js": "/React-OSCV/static/js/main.c6223146.js",
+    "main.css": "/React-OSCV/static/css/main.218c3b5f.css",
+    "main.js": "/React-OSCV/static/js/main.56ded259.js",
     "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
     "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
     "static/media/macOS_background_light.jpeg": "/React-OSCV/static/media/macOS_background_light.5923ab4195ef94fda321.jpeg",
     "static/media/profile.jpg": "/React-OSCV/static/media/profile.69a89cbeac99aa3e07dc.jpg",
     "static/media/siri_dark.webp": "/React-OSCV/static/media/siri_dark.54603504965d42343dd6.webp",
     "index.html": "/React-OSCV/index.html",
-    "main.c77ba6d8.css.map": "/React-OSCV/static/css/main.c77ba6d8.css.map",
-    "main.c6223146.js.map": "/React-OSCV/static/js/main.c6223146.js.map",
+    "main.218c3b5f.css.map": "/React-OSCV/static/css/main.218c3b5f.css.map",
+    "main.56ded259.js.map": "/React-OSCV/static/js/main.56ded259.js.map",
     "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c77ba6d8.css",
-    "static/js/main.c6223146.js"
+    "static/css/main.218c3b5f.css",
+    "static/js/main.56ded259.js"
   ]
 }
