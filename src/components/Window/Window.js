@@ -10,7 +10,7 @@ const Window = (props) => {
     <div className={`window ${className}`}>
       <AuxNavBar className={className} />
       <ModalContainer className={className}/>
-      <MainNavBar files={[]} />
+      <MainNavBar />
     </div>
   );
 };
