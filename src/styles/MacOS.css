@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Kanit:wght@800&family=Nunito:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 :root {
   --macos-gray: #242633;
   --macos-gray-rgb: rgba(36, 38, 51, 0.6);
@@ -12,10 +13,12 @@
   --macos-font: "Roboto", sans-serif;
   --mono-font: "Cutive Mono", monospace;
   --josefin-font: "Josefin Sans", sans-serif;
+  --kanit-font : 'Kanit', sans-serif;
   --macos-red: #ff4e4e;
   --macos-grey: #00cb1c;
   --macos-dark-green: #165e5c;
   --macos-violet: #7254b9;
+  --header-icon-font : 'Nunito', sans-serif;
 }
 
 *,
@@ -24,6 +27,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 .window.macOS {
@@ -197,29 +201,62 @@
 
 .macOS .modalContainer .modal .modal-header {
   background-color: rgba(131, 122, 122, 0.4);
-  border-radius: 1em 1em 0 0;
   padding: 1em;
   display: flex;
 }
 
 .macOS .modalContainer .modal .modal-icon {
-  padding: 0.4em;
+  height: .8em;
+  width: .8em;
   margin: 0 0.2em;
   border-radius: 50%;
+  font-family: var(--header-icon-font);
+  display: flex;
+  
+}
+
+.macOS .modalContainer .modal .modal-icon span {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8em;
+  font-weight: bolder;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .macOS .modalContainer .modal .modal-icon:hover {
   filter: saturate(90%);
 }
 
+.macOS .modalContainer .modal .modal-icon:hover span{
+  opacity: 100;
+}
+
 .macOS .modalContainer .modal .modal-icon.close {
   background-color: var(--macos-red);
+  color: #980100;
 }
+
 .macOS .modalContainer .modal .modal-icon.minimize {
   background-color: var(--yellow);
+  color: #995501;
 }
 .macOS .modalContainer .modal .modal-icon.expand {
   background-color: var(--macos-grey);
+}
+
+.macOS .modalContainer .modal .fullScreen{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  z-index: 30;
 }
 
 /* sections */
@@ -320,6 +357,50 @@
   padding-top: .1em;
   
 }
+
+.macOS article.softSkills {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.macOS article.softSkills > section{
+  flex: 1 1 50%;
+  min-width: 500px;
+  position: relative;
+}
+.macOS article.softSkills > section h3{
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: var(--kanit-font);
+  font-weight: 800;
+  letter-spacing: -1px;
+  position: absolute;
+
+}
+
+
+.macOS article.softSkills > section.light{
+  background-color: var(--macos-white);
+  color: var(--macos-gray);
+}
+
+.macOS article.softSkills > section.dark{
+  background-color: var(--macos-gray);
+  color: var(--macos-white);
+}
+
+.macOS article.softSkills > section.light h3{
+  bottom: -.5em;
+  left: 1em;
+  
+}
+.macOS article.softSkills > section.dark h3{
+  top: -.5em;
+  right: 1em;
+}
+
 
 
 .macOS article.about {
@@ -592,11 +673,29 @@
   }
 }
 
+
 /* End effects */
+
+@media (min-width: 1000px){
+  .macOS article.softSkills > section h3 {
+    font-size: 6em ;
+  }
+
+  .macOS article.softSkills > section.light > h3{
+    left: initial;
+    right: -.05em;
+    top: 0;
+  }
+  .macOS article.softSkills > section.dark h3{
+    top: 1em ;
+    left: -.1em ;
+  }
+}
+
 
 @media (min-width: 580px) {
   .macOS .navBarItemContainer {
-    transform: translateY(400px);
+    /*transform: translateY(400px);*/
     overflow: visible;
   }
   .macOS .mainNavBarFile:hover {
