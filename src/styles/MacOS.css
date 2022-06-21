@@ -1,5 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Kanit:wght@800&family=Nunito:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url("./animations.css");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Kanit:wght@800&family=Nunito:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
 :root {
   --macos-gray: #242633;
   --macos-gray-rgb: rgba(36, 38, 51, 0.6);
@@ -13,12 +13,12 @@
   --macos-font: "Roboto", sans-serif;
   --mono-font: "Cutive Mono", monospace;
   --josefin-font: "Josefin Sans", sans-serif;
-  --kanit-font : 'Kanit', sans-serif;
+  --kanit-font: "Kanit", sans-serif;
   --macos-red: #ff4e4e;
   --macos-grey: #00cb1c;
   --macos-dark-green: #165e5c;
   --macos-violet: #7254b9;
-  --header-icon-font : 'Nunito', sans-serif;
+  --header-icon-font: "Nunito", sans-serif;
 }
 
 *,
@@ -27,7 +27,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 .window.macOS {
@@ -182,7 +181,7 @@
 }
 
 .macOS .modalContainer {
-  flex: 5 1 70vh;
+  flex: 5 1 85vh;
   max-height: 85vh;
   display: flex;
   justify-content: center;
@@ -190,7 +189,7 @@
 }
 
 .macOS .modalContainer .modal {
-  flex: 1 1 300px;
+  width: clamp(300px, 1024px, 1024px);
   height: 100%;
   border-radius: 1em;
   display: flex;
@@ -206,13 +205,12 @@
 }
 
 .macOS .modalContainer .modal .modal-icon {
-  height: .8em;
-  width: .8em;
+  height: 0.8em;
+  width: 0.8em;
   margin: 0 0.2em;
   border-radius: 50%;
   font-family: var(--header-icon-font);
   display: flex;
-  
 }
 
 .macOS .modalContainer .modal .modal-icon span {
@@ -220,7 +218,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bolder;
   opacity: 0;
   cursor: pointer;
@@ -230,7 +228,7 @@
   filter: saturate(90%);
 }
 
-.macOS .modalContainer .modal .modal-icon:hover span{
+.macOS .modalContainer .modal .modal-icon:hover span {
   opacity: 100;
 }
 
@@ -247,7 +245,7 @@
   background-color: var(--macos-grey);
 }
 
-.macOS .modalContainer .modal .fullScreen{
+.macOS .modalContainer .modal .fullScreen {
   position: absolute;
   left: 0;
   top: 0;
@@ -268,16 +266,15 @@
   overflow-y: hidden;
 }
 
-
-.macOS article.knowledge  {
+.macOS article.knowledge {
   display: flex;
   flex: 1;
   flex-flow: row nowrap;
   width: 100%;
   max-width: 300%;
-  scroll-snap-type: x mandatory;
   overflow-y: hidden;
   transform: translateX(0);
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
@@ -291,7 +288,6 @@
   scroll-snap-align: center;
   position: relative;
   cursor: all-scroll;
-  
 }
 
 .macOS .knowledgeSection h2 {
@@ -339,7 +335,7 @@
 }
 
 .macOS .knowledgeSection:first-of-type::before {
-  content: 'Scroll down to see more';
+  content: "Scroll down to see more";
   position: absolute;
   left: 0;
   bottom: 0.5em;
@@ -354,54 +350,54 @@
   background-color: var(--macos-gray-rgb);
   margin: 0 auto;
   border-radius: 0.2em;
-  padding-top: .1em;
-  
+  padding-top: 0.1em;
 }
 
 .macOS article.softSkills {
-  flex: 1;
-  display: flex;
-  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
 }
 
-
-.macOS article.softSkills > section{
-  flex: 1 1 50%;
-  min-width: 500px;
-  position: relative;
-}
-.macOS article.softSkills > section h3{
-  font-size: 4em;
-  text-transform: uppercase;
-  font-family: var(--kanit-font);
-  font-weight: 800;
-  letter-spacing: -1px;
-  position: absolute;
-
+.macOS article.softSkills > section {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  padding: 0;
 }
 
-
-.macOS article.softSkills > section.light{
-  background-color: var(--macos-white);
-  color: var(--macos-gray);
-}
-
-.macOS article.softSkills > section.dark{
-  background-color: var(--macos-gray);
+.macOS article.softSkills > section > div {
+  scroll-snap-align: start;
+  height: clamp(70vh, 100%, 100%);
+  text-align: center;
   color: var(--macos-white);
+  scroll-padding: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: var(--macos-font);
 }
 
-.macOS article.softSkills > section.light h3{
-  bottom: -.5em;
-  left: 1em;
+.macOS article.softSkills > section > div h3 {
+  animation: switchColors2 10s 0s linear infinite alternate both;
+  font-size: 3em;
+  max-width: 100%;
+
+}
+
+.macOS article.softSkills > section > div img{
+  max-width: 200px;
+  animation: switchFillColor2 10s 0s linear infinite alternate both;
   
 }
-.macOS article.softSkills > section.dark h3{
-  top: -.5em;
-  right: 1em;
+
+.macOS article.softSkills > section > div p {
+  animation: float 10s 0s linear infinite alternate both;
+  font-size: 1.5em;
+  margin: .5em 0;
 }
-
-
 
 .macOS article.about {
   display: flex;
@@ -409,15 +405,14 @@
   flex: 1;
   overflow-y: scroll;
   background-color: var(--macos-white);
-  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
-  scrollbar-width: none;  /* hide scrollbar Firefox */
+  -ms-overflow-style: none; /* hide scrollbar IE and Edge */
+  scrollbar-width: none; /* hide scrollbar Firefox */
 }
 
 /* hide scrollbar */
 .macOS article.about::-webkit-scrollbar {
   display: none;
 }
-
 
 .macOS article.about .left-side {
   flex: 1 1 250px;
@@ -576,121 +571,7 @@
   animation: popModal 0.2s 0s linear 1 alternate both;
 }
 
-/* Effects */
-
-@keyframes moveBackground {
-  0% {
-    background-size: 100%;
-    background-position: 0%;
-  }
-  100% {
-    background-size: 300%;
-    background-position: 30% 50%;
-  }
-}
-
-@keyframes switchColors {
-  0% {
-    color: #ee7b30;
-  }
-  25% {
-    color: #f7accf;
-  }
-  50% {
-    color: #8661c1;
-  }
-  75% {
-    color: #256eff;
-  }
-  100% {
-    color: #2fd141;
-  }
-}
-
-@keyframes switchBackgroundColor {
-  0% {
-    background-color: #ee7b30;
-  }
-  25% {
-    background-color: #f7accf;
-  }
-  50% {
-    background-color: #8661c1;
-  }
-  75% {
-    background-color: #256eff;
-  }
-  100% {
-    background-color: #2fd141;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes popModal {
-  0% {
-    transform: scale(0) translateY(500px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1) translateY(0);
-    opacity: 100;
-  }
-}
-@keyframes bolderFont {
-  0% {
-    font-weight: 100;
-  }
-  50% {
-    font-weight: 300;
-  }
-
-  100% {
-    font-weight: bolder;
-  }
-}
-
-
 /* End effects */
-
-@media (min-width: 1000px){
-  .macOS article.softSkills > section h3 {
-    font-size: 6em ;
-  }
-
-  .macOS article.softSkills > section.light > h3{
-    left: initial;
-    right: -.05em;
-    top: 0;
-  }
-  .macOS article.softSkills > section.dark h3{
-    top: 1em ;
-    left: -.1em ;
-  }
-}
 
 
 @media (min-width: 580px) {
@@ -746,7 +627,6 @@
   .macOS .knowledgeSection:first-of-type::before {
     transform: translateY(500px);
     transition: all 0.4s 0s ease-in-out;
-    
   }
   .macOS .knowledgeSection:first-of-type:hover::before {
     transform: translateY(0);

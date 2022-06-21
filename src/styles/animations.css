@@ -1,0 +1,150 @@
+/* Effects */
+
+@keyframes moveBackground {
+  0% {
+    background-size: 100%;
+    background-position: 0%;
+  }
+  100% {
+    background-size: 300%;
+    background-position: 30% 50%;
+  }
+}
+
+@keyframes switchColors {
+  0% {
+    color: #ee7b30;
+  }
+  25% {
+    color: #f7accf;
+  }
+  50% {
+    color: #8661c1;
+  }
+  75% {
+    color: #256eff;
+  }
+  100% {
+    color: #2fd141;
+  }
+}
+
+@keyframes switchColors2 {
+  0% {
+    color: #BAF2D8;
+  }
+  25% {
+    color: #FFB140;
+  }
+  50% {
+    color: #9792E3;
+  }
+  75% {
+    color: #C33C54;
+  }
+  100% {
+    color: #E85F5C;
+  }
+}
+
+@keyframes switchBackgroundColor {
+  0% {
+    background-color: #ee7b30;
+  }
+  25% {
+    background-color: #f7accf;
+  }
+  50% {
+    background-color: #8661c1;
+  }
+  75% {
+    background-color: #256eff;
+  }
+  100% {
+    background-color: #2fd141;
+  }
+}
+
+@keyframes switchFillColor {
+  0% {
+    fill: #ffa630;
+  }
+  25% {
+    fill: #ff6b6b;
+  }
+  50% {
+    fill: #de1a1a;
+  }
+  75% {
+    fill: #6369d1;
+  }
+  100% {
+    fill: #60e1e0;
+  }
+}
+
+@keyframes switchFillColor2 {
+  0% {
+    fill: #BAF2D8;
+  }
+  25% {
+    fill: #FFB140;
+  }
+  50% {
+    fill: #9792E3;
+  }
+  75% {
+    fill: #C33C54;
+  }
+  100% {
+    fill: #E85F5C;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes popModal {
+  0% {
+    transform: scale(0) translateY(500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes bolderFont {
+  0% {
+    font-weight: 100;
+  }
+  50% {
+    font-weight: 300;
+  }
+
+  100% {
+    font-weight: bolder;
+  }
+}
