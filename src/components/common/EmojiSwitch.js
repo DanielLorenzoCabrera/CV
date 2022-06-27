@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-const EmojiSwitch = ({ time }) => {
-  const emojis = ["👽", "🏖️", "💻", "🎬"];
-
+const EmojiSwitch = ({ time, emojis }) => {
+  
   const [last, setLast] = useState(0);
 
   useEffect(() => {
@@ -14,6 +13,7 @@ const EmojiSwitch = ({ time }) => {
 
   const update = () => setLast(last >= emojis.length - 1 ? 0 : last + 1);
 
+  
   return <span>{emojis[last]}</span>;
 };
 

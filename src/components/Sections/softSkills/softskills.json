@@ -1,27 +1,52 @@
 [
-  
-      {
-        "title": "Communicative",
-        "body":[ "Speaking lover and open minded guy always disposed to discover new points of view."]
-      },
-      {
-        "title": "Creative",
-        "body": ["Best ideas came from those who throw caution to the wind.", "Let's give a shot to what might happen."]
-      },
-      {
-        "title": "Higly passionate",
-        "body": ["I do what I love and I love what I do." ,"Doing my very best every day to get results."]
-      },
-      {
-        "title": "Teamwork",
-        "body": ["A happy and unified team will stop at nothing." ,"Feeling comfortable being part of a team."]
-      },
-      {
-        "title": "Open-Mindedness",
-        "body": ["Sometimes is needed thinking outside the box." ,"Knowledge does not take up any space."]
-      },
-      {
-        "title": "Adaptability",
-        "body": ["Fast learning and critical thinking."]
-      }
+  {
+    "title": "communicative",
+    "body": [
+      "Speaking lover and open minded guy always disposed to discover new points of view"
+    ],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "communicative"
+  },
+  {
+    "title": "creative",
+    "body": [
+      "Best ideas came from those who throw caution to the wind",
+      "Let's give a shot to what might happen"
+    ],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "creative"
+  },
+  {
+    "title": "higly passionate",
+    "body": [
+      "I do what I love and I love what I do",
+      "Doing my very best every day to get results"
+    ],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "passionate"
+  },
+  {
+    "title": "teamwork",
+    "body": [
+      "A happy and unified team will stop at nothing",
+      "Feeling comfortable being part of a team"
+    ],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "teamwork"
+  },
+  {
+    "title": "open mindedness",
+    "body": [
+      "Sometimes is needed thinking outside the box",
+      "Knowledge does not take up any space"
+    ],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "openminded"
+  },
+  {
+    "title": "adaptability",
+    "body": ["Fast learning and critical thinking"],
+    "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
+    "img" : "adaptability"
+  }
 ]

@@ -1,21 +1,24 @@
 import softskills from "./softskills.json";
-import Icons from "./Icons";
-import Team  from './team.svg'
-
-//import Avatar from "../../Avatar";
+import Waves from "./Waves";
+import EmojiSwitch from "../../common/EmojiSwitch";
+import SoftSkillsImages from "./SoftSkillsImages";
 
 const SoftSkills = () => {
+  
   return (
     <article className="softSkills">
       <section>
         {softskills.map((skill, key) => {
           return (
             <div key={key}>
-                <h3>{skill.title}</h3>
-                <img src={Team} />
-                {skill.body.map((p, index)=> {
-                  return <p key={index}>{p}</p>
-                })}
+              
+              <h3>{skill.title}</h3>
+              {skill.body.map((p, index) => {
+                return <p key={index}>{p}</p>;
+              })}
+             {/* <EmojiSwitch time={1} emojis={skill.emojis}></EmojiSwitch>*/}
+              {Waves[key]}
+              <img src={SoftSkillsImages[skill.img]}></img>
             </div>
           );
         })}

@@ -3,6 +3,7 @@ import { Info } from "../Info";
 import EmojiSwitch from "../../common/EmojiSwitch";
 const About = () => {
   const { title, content } = Info;
+  const emojis = ["👽", "🏖️", "💻", "🎬"];
   return (
     <article className="about">
       <section className="left-side">
@@ -33,7 +34,7 @@ const About = () => {
       <section className="right-side">
         <h3>
           {title}
-          <EmojiSwitch time={3} />
+          <EmojiSwitch time={3} emojis={emojis}/>
         </h3>
         {content.map((text, index) => {
           return <p key={index}>{text}</p>;

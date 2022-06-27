@@ -356,6 +356,7 @@
 .macOS article.softSkills {
   width: 100%;
   height: 100%;
+ 
 }
 
 .macOS article.softSkills > section {
@@ -372,31 +373,65 @@
   height: clamp(70vh, 100%, 100%);
   text-align: center;
   color: var(--macos-white);
-  scroll-padding: 0;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
-  justify-content: center;
   font-family: var(--macos-font);
+  position: relative;
+}
+
+.macOS article.softSkills > section > div:nth-of-type(odd) {
+  background-color: var(--macos-white);
+  color: var(--macos-gray);
+}
+.macOS article.softSkills > section > div:nth-of-type(even) {
+  animation: switchBackgroundColor2 20s 0s linear infinite alternate both;
+}
+
+.macOS article.softSkills > section > div:nth-of-type(odd) h3 {
+  animation: switchColors2 20s 0s linear infinite alternate both;
 }
 
 .macOS article.softSkills > section > div h3 {
-  animation: switchColors2 10s 0s linear infinite alternate both;
   font-size: 3em;
   max-width: 100%;
+  margin: 1em 0 0 0;
+  z-index: 20;
+  text-transform: capitalize;
 
-}
-
-.macOS article.softSkills > section > div img{
-  max-width: 200px;
-  animation: switchFillColor2 10s 0s linear infinite alternate both;
-  
 }
 
 .macOS article.softSkills > section > div p {
+  margin: 0.5em 0;
+  max-width: 90%;
   animation: float 10s 0s linear infinite alternate both;
   font-size: 1.5em;
-  margin: .5em 0;
+  z-index: 10;
+}
+
+
+.macOS article.softSkills > section > div img{
+  z-index: 10;
+  height : clamp(100px, 200px, 200px);
+  margin: 1.5em 0 .5em 0;
+  animation: float 8s 0s linear infinite alternate both;
+}
+
+.macOS article.softSkills > section > div svg {
+  position: absolute;
+  bottom: -0.1em;
+  transform: scaleY(-1);
+  z-index: 0;
+  height: 70%;
+}
+
+.macOS article.softSkills > section > div:nth-of-type(even) svg path {
+  fill: var(--macos-white);
+}
+
+.macOS article.softSkills > section > div:nth-of-type(odd) svg path {
+  fill: var(--macos-gray);
+  animation: switchFillColor2 20s 0s linear infinite alternate both;
 }
 
 .macOS article.about {
@@ -572,7 +607,6 @@
 }
 
 /* End effects */
-
 
 @media (min-width: 580px) {
   .macOS .navBarItemContainer {

@@ -64,6 +64,23 @@
     background-color: #2fd141;
   }
 }
+@keyframes switchBackgroundColor2 {
+  0% {
+    background-color: #BAF2D8;
+  }
+  25% {
+    background-color: #FFB140;
+  }
+  50% {
+    background-color: #9792E3;
+  }
+  75% {
+    background-color: #C33C54;
+  }
+  100% {
+    background-color: #E85F5C;
+  }
+}
 
 @keyframes switchFillColor {
   0% {
