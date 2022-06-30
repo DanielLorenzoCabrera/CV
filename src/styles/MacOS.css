@@ -264,30 +264,39 @@
   display: flex;
   flex-flow: column nowrap;
   overflow-y: hidden;
-}
-
-.macOS article.knowledge {
-  display: flex;
-  flex: 1;
-  flex-flow: row nowrap;
   width: 100%;
-  max-width: 300%;
-  overflow-y: hidden;
-  transform: translateX(0);
-  scroll-snap-type: x mandatory;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 .macOS .knowledgeSection {
   background-color: var(--macos-white);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    to right bottom,
+    #8959e4,
+    #7057d4,
+    #5953c3,
+    #434fb2,
+    #30499f,
+    #1b4791,
+    #064583,
+    #004173,
+    #003f61,
+    #00394c,
+    #003339,
+    #102b29
+  );
   display: flex;
   flex-flow: column nowrap;
   position: relative;
   min-width: 100%;
-  height: 100%;
+  min-height: 100%;
   scroll-snap-align: center;
   position: relative;
-  cursor: all-scroll;
 }
 
 .macOS .knowledgeSection h2 {
@@ -296,42 +305,78 @@
   text-transform: uppercase;
   font-family: var(--josefin-font);
   font-weight: bolder;
-  color: var(--macos-gray);
+  color: var(--macos-white-rgb);
   font-size: 3em;
-  animation: switchColors 10s 0s linear infinite alternate both,
-    float 5s 0s linear infinite alternate both;
-}
-
-.macOS .knowledgeSection:hover h2 {
-  transition: all 0.08s 0s;
-  transform: translateX(20%);
 }
 
 .macOS .knowledgeSection > div {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
+  justify-content: space-around;
+  background-image: url('../assets/img/moon.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.macOS .knowledgeSection .skill {
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 1em;
-  flex: 1 1 30%;
-  font-family: var(--josefin-font);
-  font-weight: 100;
-  text-align: center;
+.macOS .knowledgeSection:first-of-type {
+  background-repeat: no-repeat;
+  background-image: url("../assets/img/astronaut2.png");
+  background-size: 30%;
+  background-position: 100% 110%;
+  animation: floatAstronaut 10s 0s linear infinite alternate both;
 }
 
-.macOS .knowledgeSection .skill i {
-  font-size: 3em;
-  background-color: transparent;
-  color: var(--macos-gray);
-  margin: 0.2em 0;
+.macOS .knowledgeSection:first-of-type > div {
+  margin: 2em auto;
+  width: 250px;
+  height: 250px !important;
+  flex: none;
+  border-radius: 50%;
+  position: relative;
+  animation: rotationRight 15s 0s linear infinite normal both;
 }
 
-.macOS .knowledgeSection .skill i:hover {
-  animation: pop 0.2s 0s ease-in-out 1 alternate both;
+.macOS .knowledgeSection:first-of-type .skill {
+  animation: rotationLeft 15s 0s linear infinite normal both;
+  position: absolute;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:first-of-type {
+  top: -3.5em;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:nth-of-type(2) {
+  top: 1em;
+  right: -3em;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:nth-of-type(2) i {
+  color: #3fb280;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:nth-of-type(3) {
+  bottom: 1em;
+  right: -3em;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:nth-of-type(4) {
+  bottom: -3.5em;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:nth-of-type(5) {
+  bottom: 1em;
+  left: -3em;
+}
+
+.macOS .knowledgeSection:first-of-type .skill:last-of-type {
+  top: 1em;
+  left: -3em;
+}
+
+.macOS .knowledgeSection:nth-of-type(2) {
+  background: linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%);
 }
 
 .macOS .knowledgeSection:first-of-type::before {
@@ -353,10 +398,48 @@
   padding-top: 0.1em;
 }
 
+.macOS .knowledgeSection .skill {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 20%;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0em 2em;
+  font-family: var(--josefin-font);
+  font-weight: 100;
+  text-align: center;
+  justify-content: center;
+  align-content: flex-start;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /*animation: floatPlanets 8s 0s linear infinite alternate both;*/
+}
+
+.macOS .knowledgeSection .skill i {
+  font-size: 3em;
+  background-color: transparent;
+  color: var(--macos-gray);
+  margin-bottom: 0.2em;
+}
+
+.macOS .knowledgeSection .skill p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+.macOS .knowledgeSection .skill i:hover {
+  animation: pop 0.2s 0s ease-in-out 1 alternate both;
+}
+
 .macOS article.softSkills {
   width: 100%;
   height: 100%;
- 
 }
 
 .macOS article.softSkills > section {
@@ -398,7 +481,6 @@
   margin: 1em 0 0 0;
   z-index: 20;
   text-transform: capitalize;
-
 }
 
 .macOS article.softSkills > section > div p {
@@ -409,11 +491,10 @@
   z-index: 10;
 }
 
-
-.macOS article.softSkills > section > div img{
+.macOS article.softSkills > section > div img {
   z-index: 10;
-  height : clamp(100px, 200px, 200px);
-  margin: 1.5em 0 .5em 0;
+  height: clamp(100px, 200px, 200px);
+  margin: 1.5em 0 0.5em 0;
   animation: float 8s 0s linear infinite alternate both;
 }
 

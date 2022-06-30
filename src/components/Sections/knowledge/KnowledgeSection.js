@@ -11,6 +11,7 @@ const KnowledgeSection = ({ skills, title ,style}) => {
           );
         })}
       </div>
+      
     </section>
   );
 };

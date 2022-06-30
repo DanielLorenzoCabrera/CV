@@ -129,6 +129,57 @@
     transform: scale(1);
   }
 }
+@keyframes floatAstronaut {
+  0% {
+    background-size: 30%;
+  }
+  50% {
+    background-size: 33%;
+    
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatPlanets {
+  0% {
+    transform: translate(0) rotate(0);
+  }
+  20%{
+    transform: translate(80% ,15%) rotate(-30deg);
+  }
+  40%{
+    transform: translate(-20% ,-52%)
+  }
+  50% {
+    transform: translate(-10%, -40%) scale(1.1);
+    
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rotationRight{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes rotationLeft{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(-360deg);
+
+  }
+}
 
 @keyframes pop {
   0% {
