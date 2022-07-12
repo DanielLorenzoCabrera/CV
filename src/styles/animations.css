@@ -31,19 +31,19 @@
 
 @keyframes switchColors2 {
   0% {
-    color: #BAF2D8;
+    color: #baf2d8;
   }
   25% {
-    color: #FFB140;
+    color: #ffb140;
   }
   50% {
-    color: #9792E3;
+    color: #9792e3;
   }
   75% {
-    color: #C33C54;
+    color: #c33c54;
   }
   100% {
-    color: #E85F5C;
+    color: #e85f5c;
   }
 }
 
@@ -66,19 +66,19 @@
 }
 @keyframes switchBackgroundColor2 {
   0% {
-    background-color: #BAF2D8;
+    background-color: #baf2d8;
   }
   25% {
-    background-color: #FFB140;
+    background-color: #ffb140;
   }
   50% {
-    background-color: #9792E3;
+    background-color: #9792e3;
   }
   75% {
-    background-color: #C33C54;
+    background-color: #c33c54;
   }
   100% {
-    background-color: #E85F5C;
+    background-color: #e85f5c;
   }
 }
 
@@ -102,19 +102,19 @@
 
 @keyframes switchFillColor2 {
   0% {
-    fill: #BAF2D8;
+    fill: #baf2d8;
   }
   25% {
-    fill: #FFB140;
+    fill: #ffb140;
   }
   50% {
-    fill: #9792E3;
+    fill: #9792e3;
   }
   75% {
-    fill: #C33C54;
+    fill: #c33c54;
   }
   100% {
-    fill: #E85F5C;
+    fill: #e85f5c;
   }
 }
 
@@ -135,7 +135,6 @@
   }
   50% {
     background-size: 33%;
-    
   }
   100% {
     transform: rotate(0deg);
@@ -146,38 +145,61 @@
   0% {
     transform: translate(0) rotate(0);
   }
-  20%{
-    transform: translate(80% ,15%) rotate(-30deg);
+  20% {
+    transform: translate(80%, 15%) rotate(-30deg);
   }
-  40%{
-    transform: translate(-20% ,-52%)
+  40% {
+    transform: translate(-20%, -52%);
   }
   50% {
     transform: translate(-10%, -40%) scale(1.1);
-    
   }
   100% {
     transform: translate(0, 0);
   }
 }
 
-@keyframes rotationRight{
-  0%{
+@keyframes rotationRight {
+  0% {
     transform: rotate(0);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
-
+  }
+}
+@keyframes hueRotate {
+  0% {
+    filter: hue-rotate(0) brightness(1) saturate(100%) contrast(100%);
+  }
+  100% {
+    filter: hue-rotate(5deg) brightness(1.1) saturate(110%) contrast(120%);
   }
 }
 
-@keyframes rotationLeft{
-  0%{
+@keyframes boxShadowSwitchColors {
+  0% {
+    box-shadow: 1em 1em 5em 1em var(--black), -3em 0em 5em 2em rgb(120, 1, 255);
+    /* 0em 0em 1em 1em var(--macos-white);*/
+    filter: brightness(120%) hue-rotate(0);
+  }
+  50% {
+    box-shadow: 1em 1em 5em 3em var(--black), 3em 0em 4em 1em rgb(47, 0, 255);
+    /*-3em 0em 4em 2em rgb(97, 23, 193);*/
+    filter: brightness(150%) hue-rotate(-20deg);
+  }
+  100% {
+    box-shadow: 1em 1em 5em 1em var(--black), -3em 0em 5em 2em rgb(120, 1, 255);
+    /* 0em 0em 1em 1em var(--macos-white);*/
+    filter: brightness(120%) hue-rotate(0);
+  }
+}
+
+@keyframes rotationLeft {
+  0% {
     transform: rotate(0);
   }
-  100%{
+  100% {
     transform: rotate(-360deg);
-
   }
 }
 

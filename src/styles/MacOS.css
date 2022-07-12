@@ -272,24 +272,9 @@
 }
 
 .macOS .knowledgeSection {
-  background-color: var(--macos-white);
-  background-size: 200%;
+  background-color: var(--macos-gray);
   background-repeat: no-repeat;
-  background: linear-gradient(
-    to right bottom,
-    #8959e4,
-    #7057d4,
-    #5953c3,
-    #434fb2,
-    #30499f,
-    #1b4791,
-    #064583,
-    #004173,
-    #003f61,
-    #00394c,
-    #003339,
-    #102b29
-  );
+  background-size: cover;
   display: flex;
   flex-flow: column nowrap;
   position: relative;
@@ -300,6 +285,7 @@
 }
 
 .macOS .knowledgeSection h2 {
+  animation: float 5s 0s linear infinite alternate both;
   margin: 0.5em 0;
   text-align: center;
   text-transform: uppercase;
@@ -307,35 +293,57 @@
   font-weight: bolder;
   color: var(--macos-white-rgb);
   font-size: 3em;
+  z-index: 10;
 }
 
 .macOS .knowledgeSection > div {
   display: flex;
   flex-flow: row wrap;
+  width: 250px;
+  height: 100% !important;
   flex: 1;
   justify-content: space-around;
-  background-image: url('../assets/img/moon.png');
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .macOS .knowledgeSection:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/img/astronaut2.png");
-  background-size: 30%;
-  background-position: 100% 110%;
-  animation: floatAstronaut 10s 0s linear infinite alternate both;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(47, 8, 101, 1) 50%,
+    rgba(20, 12, 33, 1) 100%
+  );
+  animation: hueRotate 2s 0s linear infinite alternate both;
+  overflow-x: hidden;
+}
+
+.macOS .knowledgeSection:first-of-type img {
+  position: absolute;
+  width: 250px;
+  transform: rotate(180deg);
+  top: -0.5em;
+  z-index: 20;
+  animation: float 5s 0s linear infinite alternate both;
 }
 
 .macOS .knowledgeSection:first-of-type > div {
-  margin: 2em auto;
-  width: 250px;
-  height: 250px !important;
+  margin: 4em auto;
+  max-width: 250px;
+  height: 225px !important;
   flex: none;
   border-radius: 50%;
   position: relative;
-  animation: rotationRight 15s 0s linear infinite normal both;
+  background-color: var(--black);
+  outline: 0.1em solid var(--macos-white);
+  animation: rotationRight 15s 0s linear infinite normal both,
+    boxShadowSwitchColors 6s 0s linear infinite alternate both;
 }
 
 .macOS .knowledgeSection:first-of-type .skill {
@@ -413,7 +421,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+
   /*animation: floatPlanets 8s 0s linear infinite alternate both;*/
 }
 

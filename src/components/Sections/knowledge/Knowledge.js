@@ -1,6 +1,6 @@
 import Skills from "./Skills.json";
 import KnowledgeSection from "./KnowledgeSection";
-import { useState, useEffect } from "react";
+import images from "../../../assets/img/images";
 
 const Knowledge = () => {
   return (
@@ -11,6 +11,7 @@ const Knowledge = () => {
             key={index}
             title={section.title}
             skills={section.skills}
+            image={images.knowledgeSection.frontend}
           />
         );
       })}
