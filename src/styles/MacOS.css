@@ -343,12 +343,39 @@
   background-color: var(--black);
   outline: 0.1em solid var(--macos-white);
   animation: rotationRight 15s 0s linear infinite normal both,
-    boxShadowSwitchColors 6s 0s linear infinite alternate both;
+    boxShadowSwitchColors 5s 0s linear infinite normal backwards,
+    switchOutlineColor 5s 0s linear infinite normal both;
+}
+
+.macOS .knowledgeSection:first-of-type > div::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
+  border-radius: 50%;
+  outline: 0.1em solid var(--macos-white);
+  animation: rotationY 10s 0s linear infinite normal both,
+    switchOutlineColor 5s 0s linear infinite normal both;
+  z-index: 30;
+}
+
+.macOS .knowledgeSection:first-of-type > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
+  border-radius: 50%;
+  outline: 0.1em solid var(--macos-white);
+  animation: rotationY 10s 1s linear infinite normal both,
+    switchOutlineColor 5s 0s linear infinite normal both;
+  z-index: 0;
 }
 
 .macOS .knowledgeSection:first-of-type .skill {
   animation: rotationLeft 15s 0s linear infinite normal both;
   position: absolute;
+  z-index: 10;
 }
 
 .macOS .knowledgeSection:first-of-type .skill:first-of-type {

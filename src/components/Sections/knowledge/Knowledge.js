@@ -2,6 +2,8 @@ import Skills from "./Skills.json";
 import KnowledgeSection from "./KnowledgeSection";
 import images from "../../../assets/img/images";
 
+const sections = ["frontend", "backend", "tools"];
+
 const Knowledge = () => {
   return (
     <article className="knowledge">
@@ -11,7 +13,7 @@ const Knowledge = () => {
             key={index}
             title={section.title}
             skills={section.skills}
-            image={images.knowledgeSection.frontend}
+            image={images.knowledgeSection[section.title]}
           />
         );
       })}
