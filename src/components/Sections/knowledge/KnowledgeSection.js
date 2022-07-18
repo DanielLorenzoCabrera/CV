@@ -5,9 +5,13 @@ const KnowledgeSection = ({ skills, title, image }) => {
     <section className="knowledgeSection">
       <h2>{title}</h2>
       <div>
-      <img src={image}></img>
+        <img src={image}></img>
         {skills.map((skill, index) => {
-          return (
+          return skill.name === "API" ? (
+            <div className="skill">
+              <p>{skill.name}</p>
+            </div>
+          ) : (
             <Skill key={index} name={skill.name} icon={skill.icon}></Skill>
           );
         })}
