@@ -414,10 +414,6 @@
   margin-bottom: 0.2em;
 }
 
-.macOS .knowledgeSection .skill i:hover {
-  animation: pop 0.2s 0s ease-in-out 1 alternate both;
-}
-
 .macOS .knowledgeSection:first-of-type .skill {
   animation: rotationLeft 15s -0.05s linear infinite normal both;
   position: absolute;
@@ -481,50 +477,56 @@
   min-width: 100% !important;
   min-height: 100% !important;
   position: absolute;
-  margin: 0;
-  animation: switchOutlineColor2 5s 0s linear infinite normal both;
+  /*animation: switchOutlineColor2 5s 0s linear infinite normal both;*/
+  outline: 0.5em solid var(--macos-white) !important;
   outline-width: 0.5em !important;
   transform-style: preserve-3d;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.macOS .knowledgeSection:nth-of-type(2) > div > .skill i {
+  color: var(--macos-white);
 }
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill p {
-  color: var(--macos-white);
+  color: var(--black);
   font-size: 1.5em;
   font-weight: bolder;
+  margin: 0.5em 0;
 }
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill::before {
   content: "";
   width: 100%;
   height: 40px;
-  background-color: var(--macos-white);
-  transform: rotateX(88deg) translateZ(-200px);
+  transform: rotateX(88deg) translateZ(-180px);
   box-shadow: 0 0 2em 1em var(--black);
   filter: blur(5em);
-  animation: switchBackgroundColor2 5s 0s linear infinite alternate both;
-}
-
-.macOS .knowledgeSection:nth-of-type(2) > div > .skill:last-of-type::before {
-  display: none;
+  position: absolute;
+  /*animation: switchBackgroundColor2 5s 0s linear infinite alternate both;*/
+  background-color: var(--macos-white);
 }
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill::after {
   content: "";
   width: 50%;
   height: 50%;
-  outline: 0.5em solid red;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
   transform: translateZ(-60px);
-  animation: switchOutlineColor2 5s 0.5s linear infinite normal both;
-  outline-width: 0.5em !important;
+  outline-width: 0.3em !important;
+  outline: 0.1em solid var(--black);
+  background-image: url("../assets/img/cube_background.gif");
+  background-size: cover;
 }
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill:first-of-type {
   opacity: 100;
   transform: translateZ(125px);
+  justify-content: center;
 }
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill:nth-of-type(2) {
   opacity: 100;
@@ -545,13 +547,61 @@
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill:last-of-type p {
   transform: rotateY(180deg);
-  font-size: 2em;
-  color: var(--macos-white);
-  font-weight: bolder;
 }
 
 .macOS .knowledgeSection:nth-of-type(2) > div > .skill:last-of-type::after {
   transform: translateZ(60px);
+}
+
+.macOS .knowledgeSection:nth-of-type(2) > div > .skill:last-of-type::before {
+  opacity: 0;
+}
+
+.macOS .knowledgeSection:last-of-type {
+  justify-content: center;
+  align-items: center;
+}
+.macOS .knowledgeSection:last-of-type > div {
+  outline: 0.2em solid beige;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.macOS .knowledgeSection:last-of-type > div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20em;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 1em solid #f00;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill {
+  position: absolute;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:first-of-type {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(2) {
+  bottom: 0;
+  left: 0;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:last-of-type {
+  bottom: 0;
+  right: 0;
 }
 
 .macOS article.softSkills {

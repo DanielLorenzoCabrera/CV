@@ -40,11 +40,12 @@
         "icon": "fa-brands fa-php"
       },
       {
-        "name": "SQL",
+        "name": "Database",
         "icon": "fa-solid fa-database"
       },
       {
-        "name": "API"
+        "name": "API",
+        "icon": "fa-solid fa-satellite-dish"
       }
     ]
   },
