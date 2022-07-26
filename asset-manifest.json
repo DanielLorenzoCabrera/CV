@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-OSCV/static/css/main.083350ad.css",
-    "main.js": "/React-OSCV/static/js/main.f7a43f4d.js",
+    "main.js": "/React-OSCV/static/js/main.f097d298.js",
     "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
     "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
     "static/media/cube_background.gif": "/React-OSCV/static/media/cube_background.e85829753db5405c2eff.gif",
@@ -17,11 +17,11 @@
     "static/media/passionate.svg": "/React-OSCV/static/media/passionate.0a2692fd2430f6dfdf7bcb7037d2856a.svg",
     "index.html": "/React-OSCV/index.html",
     "main.083350ad.css.map": "/React-OSCV/static/css/main.083350ad.css.map",
-    "main.f7a43f4d.js.map": "/React-OSCV/static/js/main.f7a43f4d.js.map",
+    "main.f097d298.js.map": "/React-OSCV/static/js/main.f097d298.js.map",
     "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.083350ad.css",
-    "static/js/main.f7a43f4d.js"
+    "static/js/main.f097d298.js"
   ]
 }
