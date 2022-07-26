@@ -57,12 +57,28 @@
         "icon": "fa-brands fa-git-alt"
       },
       {
-        "name": "Github",
+        "name": "Github & Gitlab",
         "icon": "fa-brands fa-github-alt"
       },
       {
         "name": "Trello",
         "icon": "fa-brands fa-trello"
+      },
+      {
+        "name": "Google workspace",
+        "icon": "fa-brands fa-google"
+      },
+      {
+        "name": "Adobe suite",
+        "icon": "fa-solid fa-layer-group"
+      },
+      {
+        "name": "Sourcetree",
+        "icon": "fa-brands fa-sourcetree"
+      },
+      {
+        "name": "Docker desktop",
+        "icon": "fa-brands fa-docker"
       }
     ]
   }

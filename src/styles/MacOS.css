@@ -283,8 +283,9 @@
   position: relative;
   min-width: 100%;
   min-height: 100%;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .macOS .knowledgeSection h2 {
@@ -312,7 +313,7 @@
     rgba(20, 12, 33, 1) 100%
   );
   animation: hueRotate 2s 0s linear infinite alternate both;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .macOS .knowledgeSection:first-of-type > div {
@@ -320,14 +321,14 @@
   flex-flow: row wrap;
   flex: none;
   justify-content: space-around;
-  width: 250px;
-  max-width: 250px;
+  width: 225px;
+  max-width: 225px;
+  margin: 2em 0 !important;
   background-color: var(--black);
   background-size: 120%;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 4em auto;
-  height: 225px;
+  margin: 1em auto;
+  height: 200px;
+  max-height: 200px;
   border-radius: 50%;
   position: relative;
   outline: 0.1em solid var(--macos-white);
@@ -558,50 +559,66 @@
 }
 
 .macOS .knowledgeSection:last-of-type {
+  position: relative;
   justify-content: center;
   align-items: center;
 }
-.macOS .knowledgeSection:last-of-type > div {
-  outline: 0.2em solid beige;
-  width: 250px;
-  height: 250px;
-  position: relative;
+
+.macOS .knowledgeSection:last-of-type h2 {
+  position: absolute;
+  top: 0.5em;
 }
 
-.macOS .knowledgeSection:last-of-type > div::before {
-  content: "";
+.macOS .knowledgeSection:last-of-type > div {
+  display: flex;
+  flex-flow: row wrap;
   width: 100%;
   height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20em;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-
-  border-top: 1em solid #f00;
+  background-color: var(--black);
+  background-size: cover;
 }
 
 .macOS .knowledgeSection:last-of-type > div > .skill {
-  position: absolute;
+  padding: 0;
+  flex: 1 1 100px;
+  max-width: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill p,
+.macOS .knowledgeSection:last-of-type > div > .skill i {
+  z-index: 10;
+  color: var(--macos-white);
 }
 
 .macOS .knowledgeSection:last-of-type > div > .skill:first-of-type {
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  animation: switchBackgroundColor2 10s 0s linear infinite alternate both;
 }
 
 .macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(2) {
-  bottom: 0;
-  left: 0;
+  animation: switchBackgroundColor2 10s 0.2s linear infinite alternate both;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(3) {
+  animation: switchBackgroundColor2 10s 0.4s linear infinite alternate both;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(4) {
+  animation: switchBackgroundColor2 10s 0.6s linear infinite alternate both;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(5) {
+  animation: switchBackgroundColor2 10s 0.8s linear infinite alternate both;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(6) {
+  animation: switchBackgroundColor2 10s 1s linear infinite alternate both;
 }
 
 .macOS .knowledgeSection:last-of-type > div > .skill:last-of-type {
-  bottom: 0;
-  right: 0;
+  animation: switchBackgroundColor2 10s 1.2s linear infinite alternate both;
 }
 
 .macOS article.softSkills {
