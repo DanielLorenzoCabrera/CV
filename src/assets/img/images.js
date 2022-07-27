@@ -6,7 +6,7 @@ const images = {
     openwebinars: require("./openwebinars.png"),
     udemy: require("./udemy.png"),
     wesbos: require("./wesbos.png"),
-    youtube: require("./youtube.webp"),
+    youtube: require("./youtube.png"),
   },
 };
 

@@ -5,7 +5,7 @@ const Certifications = () => {
   return (
     <article className="certifications">
       {info.map((course, index) => {
-        return <Course course={course} />;
+        return <Course key={index} course={course} />;
       })}
     </article>
   );

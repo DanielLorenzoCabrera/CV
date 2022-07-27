@@ -2,11 +2,25 @@ const Course = ({ course }) => {
   const { name, img, company, hours, status } = course;
   return (
     <div className="course">
-      <img src={img} />
-      <h3>{name}</h3>
-      <p>Company: {company}</p>
-      <p>Hours: {hours}</p>
-      <p>Status: {status}</p>
+      <figure>
+        <img src={img} />
+      </figure>
+      <h3>
+        {name.map((title, index) => {
+          return <span key={index}>{title}</span>;
+        })}
+      </h3>
+      <div>
+        <p>{company}</p>
+        <section>
+          <p>
+            <span>{hours}</span>hrs
+          </p>
+          <p className={status === "completed" ? "completed" : "inProgress"}>
+            {status}
+          </p>
+        </section>
+      </div>
     </div>
   );
 };

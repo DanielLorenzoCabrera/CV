@@ -16,6 +16,8 @@
   --kanit-font: "Kanit", sans-serif;
   --macos-red: #ff4e4e;
   --macos-grey: #00cb1c;
+  --turquoise: #06bb9a;
+  --orange: #ee9b00;
   --macos-dark-green: #165e5c;
   --macos-violet: #7254b9;
   --header-icon-font: "Nunito", sans-serif;
@@ -715,12 +717,11 @@
 /* START CERTIFICATIONS */
 
 .macOS article.certifications {
-  background-color: red;
   display: flex;
   flex-flow: row wrap;
   overflow-y: scroll;
   scroll-snap-align: center;
-  scroll-behavior: y mandatory;
+  scroll-snap-type: y mandatory;
   justify-content: space-around;
 }
 
@@ -729,10 +730,70 @@
   flex-flow: column nowrap;
   flex: 1 1 200px;
   max-width: 200px;
+  height: 50%;
+  margin: 0.5em;
+  overflow: hidden;
+  outline: 0.1em solid white;
+  border-radius: 0.2em;
 }
 
+.macOS article.certifications .course figure {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex: 3;
+  padding: 0.5em;
+}
 .macOS article.certifications .course img {
-  max-width: 100%;
+  object-fit: contain;
+
+  background-color: var(--macos-white);
+  border-radius: 50%;
+}
+
+.macOS article.certifications .course h3 {
+  font-size: 0.9em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  margin: 0.5em 0;
+  font-family: var(--mono-font);
+  animation: switchColors2 20s 0s linear infinite alternate both;
+}
+
+.macOS article.certifications .course div {
+  flex: 3 1 100px;
+  max-height: 100px;
+  outline: 0.2em solid var(--macos-gray);
+  padding: 0.5em;
+  background-color: var(--macos-white);
+}
+
+.macOS article.certifications .course p {
+  margin: 0.4em 0;
+  font-family: var(--header-icon-font);
+  text-align: center;
+}
+
+.macOS article.certifications .course section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.macOS article.certifications .course p.completed {
+  color: var(--macos-grey);
+}
+
+.macOS article.certifications .course p.inProgress {
+  color: var(--orange);
+}
+
+.macOS article.certifications .course p span {
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .macOS article.about {

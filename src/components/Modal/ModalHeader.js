@@ -10,7 +10,7 @@ const ModalHeader = () => {
         onClick={() => dispatch(closeAll())}
       >
         <span>
-          <i class="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
         </span>
       </article>
       <article
@@ -18,12 +18,12 @@ const ModalHeader = () => {
         onClick={() => dispatch(closeAll())}
       >
         <span>
-          <i class="fa-solid fa-minus"></i>
+          <i className="fa-solid fa-minus"></i>
         </span>
       </article>
       <article className="modal-icon expand">
         <span>
-          <i class="fa-solid fa-maximize"></i>
+          <i className="fa-solid fa-maximize"></i>
         </span>
       </article>
     </div>
