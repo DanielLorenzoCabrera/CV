@@ -79,6 +79,10 @@
       {
         "name": "Docker desktop",
         "icon": "fa-brands fa-docker"
+      },
+      {
+        "name": "Postman",
+        "icon": "fa-solid fa-paper-plane"
       }
     ]
   }

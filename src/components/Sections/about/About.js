@@ -17,7 +17,7 @@ const About = () => {
             <span>Daniel</span> Lorenzo
           </h1>
           <h2>
-            Software <span>Developer</span>
+            Web <span>Developer</span>
           </h2>
           <q>Life is a matter of attitude</q>
         </div>
@@ -34,7 +34,7 @@ const About = () => {
       <section className="right-side">
         <h3>
           {title}
-          <EmojiSwitch time={3} emojis={emojis}/>
+          <EmojiSwitch time={3} emojis={emojis} />
         </h3>
         {content.map((text, index) => {
           return <p key={index}>{text}</p>;
@@ -44,4 +44,4 @@ const About = () => {
   );
 };
 
-export {About};
+export { About };

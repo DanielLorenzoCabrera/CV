@@ -5,7 +5,7 @@ const KnowledgeSection = ({ skills, title, image }) => {
     <section className="knowledgeSection">
       <h2>{title}</h2>
       <div>
-        <img src={image}></img>
+        {image && <img src={image} alt="astronaut"></img>}
         {skills.map((skill, index) => {
           return (
             <Skill key={index} name={skill.name} icon={skill.icon}></Skill>

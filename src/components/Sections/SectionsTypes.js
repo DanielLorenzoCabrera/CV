@@ -1,8 +1,8 @@
-import { About, Knowledge, SoftSkills } from "./"
-
+import { About, Knowledge, SoftSkills, Certifications } from "./";
 
 export const renderSection = {
-    knowledge : <Knowledge/>,
-    softSkills : <SoftSkills/>,
-    about : <About/>,
-}
+  knowledge: <Knowledge />,
+  softSkills: <SoftSkills />,
+  about: <About />,
+  certifications: <Certifications />,
+};

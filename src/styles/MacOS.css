@@ -111,7 +111,7 @@
   border-radius: 50%;
 }
 
-.macOS .certificates i {
+.macOS .certifications i {
   color: var(--macos-white);
   background-color: var(--blue);
 }
@@ -212,7 +212,6 @@
   width: 0.8em;
   margin: 0 0.2em;
   border-radius: 50%;
-  font-family: var(--header-icon-font);
   display: flex;
 }
 
@@ -225,6 +224,14 @@
   font-weight: bolder;
   opacity: 0;
   cursor: pointer;
+}
+
+.macOS .modalContainer .modal .modal-icon span i {
+  color: var(--macos-gray-rgb);
+}
+
+.macOS .modalContainer .modal .modal-icon span i:last-of-type {
+  font-size: 0.8em;
 }
 
 .macOS .modalContainer .modal .modal-icon:hover {
@@ -566,7 +573,7 @@
 
 .macOS .knowledgeSection:last-of-type h2 {
   position: absolute;
-  top: 0.5em;
+  top: 2em;
 }
 
 .macOS .knowledgeSection:last-of-type > div {
@@ -617,8 +624,12 @@
   animation: switchBackgroundColor2 10s 1s linear infinite alternate both;
 }
 
-.macOS .knowledgeSection:last-of-type > div > .skill:last-of-type {
+.macOS .knowledgeSection:last-of-type > div > .skill:nth-of-type(7) {
   animation: switchBackgroundColor2 10s 1.2s linear infinite alternate both;
+}
+
+.macOS .knowledgeSection:last-of-type > div > .skill:last-of-type {
+  animation: switchBackgroundColor2 10s 1.4s linear infinite alternate both;
 }
 
 .macOS article.softSkills {
@@ -697,6 +708,31 @@
 .macOS article.softSkills > section > div:nth-of-type(odd) svg path {
   fill: var(--macos-gray);
   animation: switchFillColor2 20s 0s linear infinite alternate both;
+}
+
+/* END SOFTSKILLS */
+
+/* START CERTIFICATIONS */
+
+.macOS article.certifications {
+  background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  overflow-y: scroll;
+  scroll-snap-align: center;
+  scroll-behavior: y mandatory;
+  justify-content: space-around;
+}
+
+.macOS article.certifications .course {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 200px;
+  max-width: 200px;
+}
+
+.macOS article.certifications .course img {
+  max-width: 100%;
 }
 
 .macOS article.about {
@@ -863,6 +899,7 @@
 .macOS .modal.invisible {
   display: none;
   transform: translate(400px);
+  transition: all 2s 0s;
 }
 
 .visible {
