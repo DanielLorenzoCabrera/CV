@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/React-OSCV/static/css/main.083350ad.css",
-    "main.js": "/React-OSCV/static/js/main.f097d298.js",
+    "main.css": "/React-OSCV/static/css/main.4acd1ce4.css",
+    "main.js": "/React-OSCV/static/js/main.460045bf.js",
     "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
     "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
     "static/media/cube_background.gif": "/React-OSCV/static/media/cube_background.e85829753db5405c2eff.gif",
     "static/media/macOS_background_light.jpeg": "/React-OSCV/static/media/macOS_background_light.5923ab4195ef94fda321.jpeg",
     "static/media/profile.jpg": "/React-OSCV/static/media/profile.69a89cbeac99aa3e07dc.jpg",
+    "static/media/wesbos.png": "/React-OSCV/static/media/wesbos.4aec76770245b7cbfd60.png",
     "static/media/astronaut.png": "/React-OSCV/static/media/astronaut.8dd83c4f2dfa5733f9f0.png",
+    "static/media/fp.png": "/React-OSCV/static/media/fp.8b30b796391e065dbc9c.png",
     "static/media/openminded.svg": "/React-OSCV/static/media/openminded.81cd511a14ded5dc4863516977dda317.svg",
+    "static/media/openwebinars.png": "/React-OSCV/static/media/openwebinars.45c8687006e03e0851c6.png",
     "static/media/teamwork.svg": "/React-OSCV/static/media/teamwork.55b682c21329755f38384bbab326302e.svg",
     "static/media/communicative.svg": "/React-OSCV/static/media/communicative.c9eb38051346102ad70fb09535193a85.svg",
     "static/media/adaptability.svg": "/React-OSCV/static/media/adaptability.39f77b723ba020b59c48d1d5b0076b13.svg",
     "static/media/siri_dark.webp": "/React-OSCV/static/media/siri_dark.54603504965d42343dd6.webp",
     "static/media/creative.svg": "/React-OSCV/static/media/creative.f2ec970d5f69b9b506a5d06ede21a91e.svg",
+    "static/media/sergio_alonso.png": "/React-OSCV/static/media/sergio_alonso.ec3b774ff6b66ef6fdc6.png",
     "static/media/passionate.svg": "/React-OSCV/static/media/passionate.0a2692fd2430f6dfdf7bcb7037d2856a.svg",
     "index.html": "/React-OSCV/index.html",
-    "main.083350ad.css.map": "/React-OSCV/static/css/main.083350ad.css.map",
-    "main.f097d298.js.map": "/React-OSCV/static/js/main.f097d298.js.map",
+    "main.4acd1ce4.css.map": "/React-OSCV/static/css/main.4acd1ce4.css.map",
+    "main.460045bf.js.map": "/React-OSCV/static/js/main.460045bf.js.map",
     "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.083350ad.css",
-    "static/js/main.f097d298.js"
+    "static/css/main.4acd1ce4.css",
+    "static/js/main.460045bf.js"
   ]
 }
