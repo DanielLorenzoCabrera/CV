@@ -1,27 +1,27 @@
 [
-  {
-    "name": "knowledge",
-    "classIcon": "fa-solid fa-brain",
-    "defaultClass": "knowledge"
-  },
-  {
-    "name": "soft skills",
-    "classIcon": "fa-solid fa-spaghetti-monster-flying",
-    "defaultClass": "softSkills"
-  },
-  {
-    "name": "Certifications",
-    "classIcon": "fa-solid fa-medal",
-    "defaultClass": "certifications"
-  },
-  {
-    "name": "experience",
-    "classIcon": "fa-solid fa-user-astronaut",
-    "defaultClass": "experience"
-  },
-  {
-    "name": "About",
-    "classIcon": "fa-solid fa-ghost",
-    "defaultClass": "about"
-  }
+    {
+        "name" : "knowledge",
+        "classIcon" : "fa-solid fa-brain",
+        "defaultClass" : "knowledge"
+    },
+    {
+        "name" : "soft skills",
+        "classIcon" : "fa-solid fa-spaghetti-monster-flying",
+        "defaultClass" : "softSkills"
+    },
+    {
+        "name" : "Certifications",
+        "classIcon" : "fa-solid fa-medal",
+        "defaultClass" : "certifications"
+    },
+    {
+        "name" : "experience",
+        "classIcon" : "fa-solid fa-user-astronaut",
+        "defaultClass" : "experience"
+    }
+    ,{
+        "name" : "About",
+        "classIcon" : "fa-solid fa-ghost",
+        "defaultClass" : "about"
+    }
 ]

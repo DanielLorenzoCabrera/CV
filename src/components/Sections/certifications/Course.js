@@ -1,26 +1,31 @@
-const Course = ({ course }) => {
-  const { name, img, company, hours, status } = course;
+const Course = ({ course, delay }) => {
+  const { img, company, name, hours, status } = course;
+  console.log(delay);
   return (
-    <div className="course">
-      <figure>
-        <img src={img} />
-      </figure>
-      <h3>
-        {name.map((title, index) => {
-          return <span key={index}>{title}</span>;
-        })}
-      </h3>
-      <div>
-        <p>{company}</p>
-        <section>
-          <p>
-            <span>{hours}</span>hrs
-          </p>
-          <p className={status === "completed" ? "completed" : "inProgress"}>
-            {status}
-          </p>
-        </section>
-      </div>
+    <div className="course" style={{ animationDelay: delay * 0.2 + "s" }}>
+      <section>
+        <figure>
+          <img src={img} />
+        </figure>
+        <div className="text-content">
+          <h3>{name}</h3>
+          <h4>{company}</h4>
+        </div>
+        <div className="hours">
+          <p>{hours}</p>
+          <p>hours</p>
+        </div>
+      </section>
+      <section>
+        <div className="progress-bar-container">
+          <div className="progress-bar">
+            <div className={`progress ${status}`}></div>
+          </div>
+        </div>
+        <div className="see-more">
+          <a href="#">see more</a>
+        </div>
+      </section>
     </div>
   );
 };

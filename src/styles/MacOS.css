@@ -718,82 +718,187 @@
 
 .macOS article.certifications {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
+  align-items: flex-end;
   overflow-y: scroll;
-  scroll-snap-align: center;
+  width: 100%;
+  height: 100%;
   scroll-snap-type: y mandatory;
-  justify-content: space-around;
+}
+
+.macOS article.certifications > h2 {
+  text-align: center;
+  padding: 0.5em;
+  background-color: var(--macos-white);
+  display: none;
+  width: 100%;
 }
 
 .macOS article.certifications .course {
   display: flex;
+  width: 100%;
   flex-flow: column nowrap;
-  flex: 1 1 200px;
-  max-width: 200px;
-  height: 50%;
-  margin: 0.5em;
-  overflow: hidden;
-  outline: 0.1em solid white;
-  border-radius: 0.2em;
 }
-
-.macOS article.certifications .course figure {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  flex: 3;
-  padding: 0.5em;
-}
-.macOS article.certifications .course img {
-  object-fit: contain;
-
-  background-color: var(--macos-white);
-  border-radius: 50%;
-}
-
-.macOS article.certifications .course h3 {
-  font-size: 0.9em;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  text-align: center;
-  flex: 1;
-  margin: 0.5em 0;
-  font-family: var(--mono-font);
-  animation: switchColors2 20s 0s linear infinite alternate both;
-}
-
-.macOS article.certifications .course div {
-  flex: 3 1 100px;
-  max-height: 100px;
-  outline: 0.2em solid var(--macos-gray);
-  padding: 0.5em;
-  background-color: var(--macos-white);
-}
-
-.macOS article.certifications .course p {
-  margin: 0.4em 0;
-  font-family: var(--header-icon-font);
-  text-align: center;
-}
-
-.macOS article.certifications .course section {
+.macOS article.certifications .course > section {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
 }
 
-.macOS article.certifications .course p.completed {
-  color: var(--macos-grey);
+.macOS article.certifications .course > section figure {
+  max-width: 150px;
+  display: flex;
+  background-color: var(--macos-white);
+  border-radius: 50%;
+  margin: 1em;
 }
 
-.macOS article.certifications .course p.inProgress {
-  color: var(--orange);
+.macOS article.certifications .course > section figure img {
+  object-fit: contain;
+  max-width: 100%;
 }
 
-.macOS article.certifications .course p span {
+.macOS article.certifications .course > section div.text-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  color: var(--macos-white);
+  margin: 1em 0 0 1em;
+}
+
+.macOS article.certifications .course > section div.text-content h3 {
+  font-family: var(--header-icon-font);
+  margin: 0.5em 0;
+}
+
+.macOS article.certifications .course > section div.text-content h4 {
+  font-family: var(--header-icon-font);
+}
+
+.macOS article.certifications .course > section div.hours {
+  margin: 0 1em 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.macOS article.certifications .course > section div.hours p {
+  font-family: var(--header-icon-font);
+}
+
+.macOS article.certifications .course:last-of-type p:first-of-type::before {
+  content: "+";
+}
+
+.macOS article.certifications .course > section div.hours p:first-of-type {
+  background-color: var(--macos-white);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
   font-weight: bolder;
-  text-transform: uppercase;
+}
+.macOS article.certifications .course > section div.hours p:last-of-type {
+  color: var(--macos-white);
+}
+
+.macOS article.certifications .course > section:last-of-type {
+  width: 100%;
+  height: 50px;
+}
+
+.macOS article.certifications .course > section .progress-bar-container {
+  flex: 5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.macOS article.certifications .course > section .progress-bar {
+  width: 80%;
+  height: 5px;
+  background-color: var(--macos-white-rgb);
+  margin-left: 1em;
+  position: relative;
+  border-radius: 1em;
+}
+
+.macOS article.certifications .course > section .progress-bar::before {
+  content: "0%";
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  font-size: 0.8em;
+  color: var(--macos-white);
+  font-weight: bolder;
+}
+
+.macOS article.certifications .course > section .progress-bar::after {
+  content: "100%";
+  position: absolute;
+  bottom: 0.5em;
+  right: 0;
+  font-size: 0.8em;
+  color: var(--macos-white);
+  font-weight: bolder;
+}
+
+.macOS article.certifications .course > section .progress {
+  border-radius: 1em;
+  background-color: var(--macos-white);
+  animation: switchBackgroundColor 20s 0s linear infinite alternate both;
+  filter: saturate(100%);
+}
+
+.macOS article.certifications .course > section .progress.completed {
+  width: 100%;
+  height: 100%;
+}
+
+.macOS article.certifications .course > section .progress.in-progress {
+  width: 50%;
+  height: 100%;
+}
+
+.macOS article.certifications .course > section .see-more {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.macOS article.certifications .course > section .see-more a {
+  text-decoration: none;
+  font-family: var(--header-icon-font);
+  font-weight: bolder;
+  color: var(--macos-white);
+}
+
+.macOS article.certifications .course > section .see-more a:hover {
+  animation: switchColors2 10s 0s linear infinite alternate both;
+}
+
+.macOS article.certifications .course > section .see-more a::after {
+  content: "\2192";
+  margin: 0 0.5em;
+}
+
+.macOS article.certifications div.time-invested {
+  color: var(--macos-white);
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--header-icon-font);
+  font-size: 1.3em;
+}
+
+.macOS article.certifications div.time-invested span {
+  animation: switchColors2 10s 0s linear infinite alternate both;
+  font-weight: bolder;
 }
 
 .macOS article.about {

@@ -1,96 +1,110 @@
 import Images from "../../../assets/img/images";
 
-const { openwebinars, udemy, youtube, wesbos } = Images.certifications;
+const { openwebinars, udemy, youtube, wesbos, sergioAlonso, fp } =
+  Images.certifications;
 const { completed, inProgress } = {
   completed: "completed",
-  inProgress: "In progress",
+  inProgress: "in-progress",
 };
 
 const certifications = [
   {
-    company: "OpenWebinars",
-    name: ["JavaScript Prototypes"],
+    company: "Higher degree",
+    img: fp,
+    name: "Web Application Development",
+    hours: 2000,
+    status: completed,
+  },
+  {
+    company: "Sergio Alonso Foundation",
+    img: sergioAlonso,
+    name: "FP Plus",
+    hours: 326,
+    status: completed,
+  },
+  {
+    company: "Openwebinars",
     img: openwebinars,
+    name: "SCRUM: Fundamentals & best practices",
+    hours: 5,
+    status: completed,
+  },
+  {
+    company: "Openwebinars",
+    img: openwebinars,
+    name: "JavaScript Prototypes",
     hours: 1,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["SCRUM: Fundamentals", " & best practices"],
+    company: "Openwebinars",
     img: openwebinars,
-    hours: 5,
-    status: completed,
-  },
-  {
-    company: "OpenWebinars",
-    name: ["Clean Code"],
-    img: openwebinars,
+    name: "Clean Code",
     hours: 9,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["Agile Methodologies", "& SCRUM"],
+    company: "Openwebinars",
     img: openwebinars,
+    name: "Agile Methodologies & SCRUM",
     hours: 11,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["DOM management", "with JavaScript"],
+    company: "Openwebinars",
     img: openwebinars,
+    name: "DOM management with JavaScript",
     hours: 8,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["JavaScript", "Advanced level"],
+    company: "Openwebinars",
     img: openwebinars,
+    name: "Advanced level JavaScript ",
     hours: 5,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["Async programming", "JavaScript"],
+    company: "Openwebinars",
     img: openwebinars,
+    name: "Async programming JavaScript",
     hours: 2,
     status: completed,
   },
   {
-    company: "OpenWebinars",
-    name: ["Agile UML"],
+    company: "Openwebinars",
     img: openwebinars,
+    name: "Agile UML",
     hours: 9,
     status: completed,
   },
   {
     company: "Udemy",
-    name: ["React", "The Complete Guide"],
     img: udemy,
+    name: "React - The Complete Guide",
     hours: 48.5,
     status: inProgress,
   },
   {
     company: "Udemy",
-    name: ["Vue", "The Complete Guide"],
     img: udemy,
+    name: "Vue - The Complete Guide",
     hours: 31.5,
     status: inProgress,
   },
   {
     company: "Wes Bos",
-    name: ["JavaScript30"],
     img: wesbos,
+    name: "JavaScript30",
     hours: 7,
     status: completed,
   },
   {
     company: "Youtube",
-    name: ["Self-taught"],
     img: youtube,
+    name: "Self-taught",
     hours: 100,
-    status: completed,
+    status: inProgress,
   },
 ];
-
 export default certifications;
