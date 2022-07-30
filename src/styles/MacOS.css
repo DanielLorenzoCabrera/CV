@@ -738,6 +738,7 @@
   display: flex;
   width: 100%;
   flex-flow: column nowrap;
+  padding: 0 1em;
 }
 .macOS article.certifications .course > section {
   display: flex;
@@ -745,11 +746,11 @@
 }
 
 .macOS article.certifications .course > section figure {
-  max-width: 150px;
+  max-width: 100px;
   display: flex;
   background-color: var(--macos-white);
   border-radius: 50%;
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .macOS article.certifications .course > section figure img {
