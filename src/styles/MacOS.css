@@ -32,6 +32,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .window.macOS {
@@ -196,7 +197,7 @@
 .macOS .modalContainer .modal {
   width: clamp(300px, 1024px, 1024px);
   height: 100%;
-  border-radius: 1em;
+  border-radius: 0 0 1em 1em;
   display: flex;
   flex-flow: column nowrap;
   background-color: var(--macos-gray);
@@ -206,7 +207,7 @@
 .macOS .modalContainer .modal .modal-header {
   background-color: rgba(131, 122, 122, 0.4);
   padding: 1em;
-  display: flex;
+  display: none;
 }
 
 .macOS .modalContainer .modal .modal-icon {
@@ -645,6 +646,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  scroll-snap-stop: always;
   padding: 0;
 }
 
@@ -658,6 +660,7 @@
   flex-flow: column nowrap;
   font-family: var(--macos-font);
   position: relative;
+  overflow: hidden;
 }
 
 .macOS article.softSkills > section > div:nth-of-type(odd) {
@@ -697,7 +700,7 @@
 
 .macOS article.softSkills > section > div svg {
   position: absolute;
-  bottom: -0.1em;
+  bottom: -0.5em;
   transform: scaleY(-1);
   z-index: 0;
   height: 70%;
@@ -740,6 +743,7 @@
   flex-flow: column nowrap;
   padding: 0 1em;
 }
+
 .macOS article.certifications .course > section {
   display: flex;
   flex-flow: row nowrap;
@@ -748,8 +752,7 @@
 .macOS article.certifications .course > section figure {
   max-width: 100px;
   display: flex;
-  background-color: var(--macos-white);
-  border-radius: 50%;
+
   margin: 1em 0;
 }
 
@@ -766,13 +769,45 @@
   margin: 1em 0 0 1em;
 }
 
-.macOS article.certifications .course > section div.text-content h3 {
+.macOS article.certifications .course > section div.text-content > * {
+  margin: 0.5em;
   font-family: var(--header-icon-font);
-  margin: 0.5em 0;
 }
 
-.macOS article.certifications .course > section div.text-content h4 {
+.macOS article.certifications .course > section div.text-content h3 {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: var(--josefin-font);
+}
+
+.macOS article.certifications .course > section div.text-content h4,
+.macOS article.certifications .course > section div.text-content a {
   font-family: var(--header-icon-font);
+  letter-spacing: 0.2em;
+}
+
+.macOS article.certifications .course.higherdegree h4 {
+  color: #f28e69 !important;
+}
+
+.macOS article.certifications .course.openwebinars h4 {
+  color: #ff3486 !important;
+}
+
+.macOS article.certifications .course.sergioalonsofoundation h4 {
+  color: #0161a9 !important;
+}
+
+.macOS article.certifications .course.udemy h4 {
+  color: #be32f5 !important;
+}
+
+.macOS article.certifications .course.wesbos h4 {
+  color: #fdc42e !important;
+}
+
+.macOS article.certifications .course.youtube h4 {
+  color: #ff0100 !important;
 }
 
 .macOS article.certifications .course > section div.hours {
@@ -787,7 +822,7 @@
   font-family: var(--header-icon-font);
 }
 
-.macOS article.certifications .course:last-of-type p:first-of-type::before {
+.macOS article.certifications .course.youtube p:first-of-type::before {
   content: "+";
 }
 
@@ -801,13 +836,45 @@
   border-radius: 1em;
   font-weight: bolder;
 }
-.macOS article.certifications .course > section div.hours p:last-of-type {
+
+.macOS article.certifications .course:nth-of-type(even) {
+  background-color: var(--macos-white);
+}
+
+.macOS article.certifications .course:nth-of-type(even) :is(a, p, h3, h4),
+.course:nth-of-type(even) .progress-bar::before,
+.course:nth-of-type(even) .progress-bar::after,
+.course:nth-of-type(even) .see-more a {
+  color: var(--macos-gray);
+}
+
+.macOS article.certifications .course:nth-of-type(odd) :is(a, p),
+.course:nth-of-type(odd) .progress-bar::before,
+.course:nth-of-type(odd) .progress-bar::after,
+.course:nth-of-type(odd) .see-more a {
   color: var(--macos-white);
+}
+
+.macOS
+  article.certifications
+  .course:nth-of-type(even)
+  div.hours
+  p:first-of-type {
+  background-color: var(--macos-gray);
+  color: var(--macos-white);
+}
+
+.macOS
+  article.certifications
+  .course:nth-of-type(odd)
+  div.hours
+  p:first-of-type {
+  color: var(--macos-gray);
 }
 
 .macOS article.certifications .course > section:last-of-type {
   width: 100%;
-  height: 50px;
+  height: 100px;
 }
 
 .macOS article.certifications .course > section .progress-bar-container {
@@ -832,7 +899,7 @@
   bottom: 0.5em;
   left: 0;
   font-size: 0.8em;
-  color: var(--macos-white);
+
   font-weight: bolder;
 }
 
@@ -842,7 +909,6 @@
   bottom: 0.5em;
   right: 0;
   font-size: 0.8em;
-  color: var(--macos-white);
   font-weight: bolder;
 }
 
@@ -874,16 +940,26 @@
   text-decoration: none;
   font-family: var(--header-icon-font);
   font-weight: bolder;
-  color: var(--macos-white);
 }
 
 .macOS article.certifications .course > section .see-more a:hover {
-  animation: switchColors2 10s 0s linear infinite alternate both;
+  animation: switchColors 30s -15s linear infinite alternate both;
 }
 
 .macOS article.certifications .course > section .see-more a::after {
-  content: "\2192";
+  display: none;
+  content: "\25B7"; /* \2192*/
   margin: 0 0.5em;
+  font-size: 0.9em;
+  transform: rotate(180deg);
+  transition: all 0.3s 0s linear;
+}
+
+.macOS article.certifications .course > section .see-more a:hover::after {
+  content: "\25B6";
+  font-size: 0.6em;
+  transition: all 0.3s 0s ease-in-out;
+  transform: rotate(0deg);
 }
 
 .macOS article.certifications div.time-invested {
@@ -893,12 +969,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--header-icon-font);
   font-size: 1.3em;
+  font-family: var(--macos-font);
 }
 
 .macOS article.certifications div.time-invested span {
-  animation: switchColors2 10s 0s linear infinite alternate both;
+  animation: switchColors 30s 0s linear infinite alternate both;
   font-weight: bolder;
 }
 
@@ -1121,6 +1197,10 @@
   .macOS .modalContainer .modal {
     max-width: 1024px;
     height: 70vh;
+    border-radius: 1em;
+  }
+  .macOS .modalContainer .modal .modal-header {
+    display: flex;
   }
 
   .macOS article.about > * {
@@ -1134,5 +1214,9 @@
   .macOS .knowledgeSection:first-of-type:hover::before {
     transform: translateY(0);
     transition: all 0.4s 0s ease-in-out;
+  }
+
+  .macOS article.certifications .course > section .see-more a::after {
+    display: inline-block;
   }
 }

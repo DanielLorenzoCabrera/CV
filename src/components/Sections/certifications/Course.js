@@ -1,8 +1,12 @@
 const Course = ({ course, delay }) => {
-  const { img, company, name, hours, status } = course;
-  console.log(delay);
+  const { img, company, name, hours, status, link } = course;
+  const delayEffect = { animationDelay: delay * -2 + "s" };
+  const setClassName = (companyName) => {
+    return company.split(" ").join("").toLowerCase();
+  };
+
   return (
-    <div className="course" style={{ animationDelay: delay * 0.2 + "s" }}>
+    <div className={`course ${setClassName(company)}`}>
       <section>
         <figure>
           <img src={img} />
@@ -22,9 +26,13 @@ const Course = ({ course, delay }) => {
             <div className={`progress ${status}`}></div>
           </div>
         </div>
-        <div className="see-more">
-          <a href="#">see more</a>
-        </div>
+        {link && (
+          <div className="see-more">
+            <a href={link} target="_blank" rel="noreferrer">
+              see more
+            </a>
+          </div>
+        )}
       </section>
     </div>
   );
