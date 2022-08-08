@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-OSCV/static/css/main.d4c08c1d.css",
-    "main.js": "/React-OSCV/static/js/main.edfefda1.js",
+    "main.css": "/React-OSCV/static/css/main.8ee9f9be.css",
+    "main.js": "/React-OSCV/static/js/main.e232aa5e.js",
     "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
     "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
     "static/media/cube_background.gif": "/React-OSCV/static/media/cube_background.e85829753db5405c2eff.gif",
@@ -20,13 +20,14 @@
     "static/media/creative.svg": "/React-OSCV/static/media/creative.f2ec970d5f69b9b506a5d06ede21a91e.svg",
     "static/media/sergio_alonso.png": "/React-OSCV/static/media/sergio_alonso.ec3b774ff6b66ef6fdc6.png",
     "static/media/passionate.svg": "/React-OSCV/static/media/passionate.0a2692fd2430f6dfdf7bcb7037d2856a.svg",
+    "static/media/singularFactory.webp": "/React-OSCV/static/media/singularFactory.2d2a53ea72a5291ed6d7.webp",
     "index.html": "/React-OSCV/index.html",
-    "main.d4c08c1d.css.map": "/React-OSCV/static/css/main.d4c08c1d.css.map",
-    "main.edfefda1.js.map": "/React-OSCV/static/js/main.edfefda1.js.map",
+    "main.8ee9f9be.css.map": "/React-OSCV/static/css/main.8ee9f9be.css.map",
+    "main.e232aa5e.js.map": "/React-OSCV/static/js/main.e232aa5e.js.map",
     "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4c08c1d.css",
-    "static/js/main.edfefda1.js"
+    "static/css/main.8ee9f9be.css",
+    "static/js/main.e232aa5e.js"
   ]
 }
