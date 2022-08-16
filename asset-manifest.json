@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-OSCV/static/css/main.8ee9f9be.css",
-    "main.js": "/React-OSCV/static/js/main.e232aa5e.js",
+    "main.css": "/React-OSCV/static/css/main.d0d499da.css",
+    "main.js": "/React-OSCV/static/js/main.047274ed.js",
     "static/js/787.9f21992c.chunk.js": "/React-OSCV/static/js/787.9f21992c.chunk.js",
     "static/media/giphy.webp": "/React-OSCV/static/media/giphy.fee08d036e1f8108dc43.webp",
     "static/media/cube_background.gif": "/React-OSCV/static/media/cube_background.e85829753db5405c2eff.gif",
@@ -10,6 +10,8 @@
     "static/media/profile.jpg": "/React-OSCV/static/media/profile.69a89cbeac99aa3e07dc.jpg",
     "static/media/wesbos.png": "/React-OSCV/static/media/wesbos.4aec76770245b7cbfd60.png",
     "static/media/astronaut.png": "/React-OSCV/static/media/astronaut.8dd83c4f2dfa5733f9f0.png",
+    "static/media/diktados.png": "/React-OSCV/static/media/diktados.8c6e70e87226aac14d8a.png",
+    "static/media/cargobot.png": "/React-OSCV/static/media/cargobot.ebfd7f1b368d49effd5e.png",
     "static/media/fp.png": "/React-OSCV/static/media/fp.8b30b796391e065dbc9c.png",
     "static/media/openminded.svg": "/React-OSCV/static/media/openminded.81cd511a14ded5dc4863516977dda317.svg",
     "static/media/openwebinars.png": "/React-OSCV/static/media/openwebinars.45c8687006e03e0851c6.png",
@@ -22,12 +24,12 @@
     "static/media/passionate.svg": "/React-OSCV/static/media/passionate.0a2692fd2430f6dfdf7bcb7037d2856a.svg",
     "static/media/singularFactory.webp": "/React-OSCV/static/media/singularFactory.2d2a53ea72a5291ed6d7.webp",
     "index.html": "/React-OSCV/index.html",
-    "main.8ee9f9be.css.map": "/React-OSCV/static/css/main.8ee9f9be.css.map",
-    "main.e232aa5e.js.map": "/React-OSCV/static/js/main.e232aa5e.js.map",
+    "main.d0d499da.css.map": "/React-OSCV/static/css/main.d0d499da.css.map",
+    "main.047274ed.js.map": "/React-OSCV/static/js/main.047274ed.js.map",
     "787.9f21992c.chunk.js.map": "/React-OSCV/static/js/787.9f21992c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ee9f9be.css",
-    "static/js/main.e232aa5e.js"
+    "static/css/main.d0d499da.css",
+    "static/js/main.047274ed.js"
   ]
 }
