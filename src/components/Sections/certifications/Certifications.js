@@ -15,7 +15,7 @@ const Certifications = () => {
       })}
       <div className="time-invested">
         <p>
-          Time invested : <span>+ {totalHours()}</span> hrs
+          More than <span>{totalHours()}</span> hours invested
         </p>
       </div>
     </article>

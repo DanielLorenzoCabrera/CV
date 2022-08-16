@@ -1,3 +1,4 @@
+
 const images = {
   knowledgeSection: {
     frontend: require("./astronaut.png"),
@@ -9,6 +10,12 @@ const images = {
     youtube: require("./youtube.png"),
     sergioAlonso: require("./sergio_alonso.png"),
     fp: require("./fp.png"),
+  },
+  companies: {
+    singularFactory: require("./singularFactory.webp"),
+    hologis : require('./hologis.png'),
+    cargobot : require('./cargobot.png'),
+    diktados : require('./diktados.png')
   },
 };
 

@@ -5,7 +5,7 @@
       "Speaking lover and open minded guy always disposed to discover new points of view"
     ],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "communicative"
+    "img": "communicative"
   },
   {
     "title": "creative",
@@ -14,16 +14,16 @@
       "Let's give a shot to what might happen"
     ],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "creative"
+    "img": "creative"
   },
   {
-    "title": "higly passionate",
+    "title": "highly passionate",
     "body": [
       "I do what I love and I love what I do",
       "Doing my very best every day to get results"
     ],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "passionate"
+    "img": "passionate"
   },
   {
     "title": "teamwork",
@@ -32,7 +32,7 @@
       "Feeling comfortable being part of a team"
     ],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "teamwork"
+    "img": "teamwork"
   },
   {
     "title": "open mindedness",
@@ -41,12 +41,12 @@
       "Knowledge does not take up any space"
     ],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "openminded"
+    "img": "openminded"
   },
   {
     "title": "adaptability",
     "body": ["Fast learning and critical thinking"],
     "emojis": ["😬", "🥺", "😣", "😖", "😫", "😩"],
-    "img" : "adaptability"
+    "img": "adaptability"
   }
 ]

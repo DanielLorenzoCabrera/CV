@@ -35,6 +35,8 @@
   scroll-behavior: smooth;
 }
 
+
+
 .window.macOS {
   background-image: url("../assets/img/macOS_background_light.jpeg");
   background-size: cover;
@@ -231,10 +233,7 @@
 
 .macOS .modalContainer .modal .modal-icon span i {
   color: var(--macos-gray-rgb);
-}
-
-.macOS .modalContainer .modal .modal-icon span i:last-of-type {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .macOS .modalContainer .modal .modal-icon:hover {
@@ -258,17 +257,17 @@
   background-color: var(--macos-grey);
 }
 
-.macOS .modalContainer .modal .fullScreen {
+/*.macOS .modalContainer .modal.fullScreen {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   height: 100vh !important;
-  max-width: 100% !important;
+  min-width: 100% !important;
   border-radius: 0 !important;
   z-index: 30;
-}
+}*/
 
 /* sections */
 
@@ -382,7 +381,8 @@
   z-index: 0;
 }
 
-.macOS .knowledgeSection:first-of-type::before {
+.macOS .knowledgeSection:first-of-type::before,
+.macOS article.softSkills > section > div:first-of-type::before {
   content: "Scroll down to see more";
   position: absolute;
   left: 0;
@@ -488,7 +488,6 @@
   min-width: 100% !important;
   min-height: 100% !important;
   position: absolute;
-  /*animation: switchOutlineColor2 5s 0s linear infinite normal both;*/
   outline: 0.5em solid var(--macos-white) !important;
   outline-width: 0.5em !important;
   transform-style: preserve-3d;
@@ -515,7 +514,6 @@
   box-shadow: 0 0 2em 1em var(--black);
   filter: blur(5em);
   position: absolute;
-  /*animation: switchBackgroundColor2 5s 0s linear infinite alternate both;*/
   background-color: var(--macos-white);
 }
 
@@ -974,8 +972,153 @@
 }
 
 .macOS article.certifications div.time-invested span {
-  animation: switchColors 30s 0s linear infinite alternate both;
+  animation: switchColors 60s 0s linear infinite alternate both;
+  font-weight: 500;
+}
+
+/* START EXPERIENCE*/
+.macOS article.experience {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.macOS article.experience .company {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-color: var(--macos-gray);
+}
+
+.macOS article.experience .company > section:first-of-type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.macOS article.experience .company :is(h3, h4) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--macos-white);
+  text-transform: uppercase;
+  font-family: var(--kanit-font);
+}
+
+
+.macOS article.experience .company h3 p {
+  font-family: var(--header-icon-font);
+  font-size: 0.8em;
+  text-transform: capitalize;
+  animation: switchColors 100s 0s linear infinite alternate both;
+}
+
+.macOS article.experience .company .company-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 1em;
+  
+}
+.macOS article.experience .company .company-img img{
+  max-width: 150px;
+  margin: 1em auto;
+  filter: invert();
+}
+
+.macOS article.experience .company .projects {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+}
+
+.macOS article.experience .company .project {
+  margin: 1.5em 1em;
+  flex: 1 1 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  color: var(--macos-white);
+  border-radius: 0.5em;
+}
+
+.macOS article.experience .company .project:hover{
+  outline: .1em solid var(--macos-white);
+}
+
+.macOS article.experience .project figure {
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.macOS article.experience .project figure img{
+  background-color: var(--macos-white);
+  padding: .1em;
+  border-radius: 50%;
+  max-width: 100px;
+  filter: invert(10%);
+}
+
+.macOS article.experience .project h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.macOS article.experience .project  p {
+  line-height: 1.5em;
+  text-align: justify;
+  margin: 0.5em 0;
+  
+  
+}
+.macOS article.experience .project  p:first-of-type{
+  padding: 0 1em;
+}
+
+
+.macOS article.experience .project-info {
+  display: flex;
+  margin: auto 0 .5em 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.macOS article.experience .project-info a{
+  color: var(--macos-white);
+  text-decoration: none;
+  padding: .5em;
+  border-radius: .1em;
+  position: relative;
+}
+
+.macOS article.experience .project-info a:before{
+  width: 0;
+  height: 0;
+  content: ' ';
+  color: transparent;
+  animation: switchBackgroundColor 10s 0s linear infinite alternate both;
+}
+
+.macOS article.experience .project-info a:hover:before{
+  width: 90%;
+  height: .1em;
+  bottom: 0;
+  
+  position: absolute;
+  transition: all .2s 0s linear;
+  
+}
+
+.macOS article.experience .project .technology {
   font-weight: bolder;
+  animation: switchColors 60s 0s linear infinite alternate both;
+  animation: switchColors 60s 0s linear infinite alternate both;
+  font-family: var(--header-icon-font);
+
+
 }
 
 .macOS article.about {
@@ -1211,7 +1354,8 @@
     transform: translateY(500px);
     transition: all 0.4s 0s ease-in-out;
   }
-  .macOS .knowledgeSection:first-of-type:hover::before {
+  .macOS .knowledgeSection:first-of-type:hover::before,
+  .macOS article.softSkills > section > div:first-of-type:hover::before {
     transform: translateY(0);
     transition: all 0.4s 0s ease-in-out;
   }
@@ -1220,3 +1364,4 @@
     display: inline-block;
   }
 }
+
