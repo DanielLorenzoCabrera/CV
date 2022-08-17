@@ -1271,7 +1271,7 @@
 .macOS article.about .right-side > h3 {
   font-size: 1.5em;
   text-transform: uppercase;
-  color: var(--macos-gray);
+  font-family: var(--kanit-font);
   animation: switchColors 50s 0s linear infinite alternate both;
   margin-bottom: 1em;
   margin: 1em 0;
@@ -1282,7 +1282,7 @@
 }
 
 .macOS article.about .right-side > p {
-  font-family: var(--macos-font);
+  font-family: var(--header-icon-font);
   line-height: 2em;
 }
 
