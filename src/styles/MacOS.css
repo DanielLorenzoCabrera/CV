@@ -1012,7 +1012,7 @@
   font-family: var(--header-icon-font);
   font-size: 0.8em;
   text-transform: capitalize;
-  animation: switchColors 100s 0s linear infinite alternate both;
+  color: var(--macos-white);
 }
 
 .macOS article.experience .company .company-img {
@@ -1022,9 +1022,9 @@
   
 }
 .macOS article.experience .company .company-img img{
-  max-width: 150px;
+  max-width: 100px;
   margin: 1em auto;
-  filter: invert();
+  filter: invert(1);
 }
 
 .macOS article.experience .company .projects {
@@ -1039,12 +1039,32 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  color: var(--macos-white);
+  background-color: var(--macos-gray-rgb);
   border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.macOS article.experience .company .project *{
+  z-index: 10;
+}
+
+.macOS article.experience .company .project svg{
+  position: absolute;
+  background-color: var(--black);
+  transform: scaleY(-1) ;
+  height: 100%;
+  z-index: 0;
+  animation: switchBackgroundColor3 10s 0s linear infinite alternate both;
+  
+}
+
+.macOS article.experience .company .project svg path{
+  fill: var(--macos-gray-rgb) ;
 }
 
 .macOS article.experience .company .project:hover{
-  outline: .1em solid var(--macos-white);
+  background-color: var(--macos-gray);
 }
 
 .macOS article.experience .project figure {
@@ -1065,19 +1085,19 @@
 .macOS article.experience .project h4 {
   text-transform: uppercase;
   text-align: center;
+  color: var(--macos-white);
 }
 
 .macOS article.experience .project  p {
   line-height: 1.5em;
   text-align: justify;
   margin: 0.5em 0;
-  
-  
+  color: var(--macos-white);
 }
+
 .macOS article.experience .project  p:first-of-type{
   padding: 0 1em;
 }
-
 
 .macOS article.experience .project-info {
   display: flex;
@@ -1114,8 +1134,7 @@
 
 .macOS article.experience .project .technology {
   font-weight: bolder;
-  animation: switchColors 60s 0s linear infinite alternate both;
-  animation: switchColors 60s 0s linear infinite alternate both;
+  animation: switchColors3 30s -10s linear infinite alternate both;
   font-family: var(--header-icon-font);
 
 

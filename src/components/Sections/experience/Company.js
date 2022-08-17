@@ -1,3 +1,5 @@
+import Waves from '../softSkills/Waves'
+
 const Company = ({ experience }) => {
   const { company, projects, link, image, start, end } = experience;
   return (
@@ -20,6 +22,7 @@ const Company = ({ experience }) => {
           const { name, description, technology, img, link } = project;
           return (
             <div className="project" key={index}>
+              {Waves[0]}
               <figure>
                 <img src={img} alt="" />
               </figure>

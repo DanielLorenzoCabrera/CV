@@ -47,6 +47,24 @@
   }
 }
 
+@keyframes switchColors3 {
+  0% {
+    color: #0E7C82;
+  }
+  25%{
+    color: #58A4B0;
+  }
+  50% {
+    color: #68A3FC;
+  }
+  75%{
+    color: #8A4FFF;
+  }
+  100% {
+    color: #AB5690; 
+}
+}
+
 @keyframes switchOutlineColor {
   0% {
     outline: 0.1em solid #baf2d8;
@@ -115,6 +133,24 @@
   }
   100% {
     background-color: #e85f5c;
+  }
+}
+
+@keyframes switchBackgroundColor3 {
+  0% {
+    background-color: #0E7C82;
+  }
+  25%{
+    background-color: #58A4B0;
+  }
+  50% {
+    background-color: #68A3FC;
+  }
+  75%{
+    background-color: #8A4FFF;
+  }
+  100% {
+    background-color: #AB5690; 
   }
 }
 
